@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taylor Series Explorer — Calculus II</title>
+
+  <!-- Tailwind CSS v3.4.17, precompiled for this page -->
+  <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono,ui-monospace,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.bottom-12{bottom:3rem}.bottom-3{bottom:.75rem}.left-0{left:0}.left-3{left:.75rem}.right-3{right:.75rem}.top-0{top:0}.top-3{top:.75rem}.z-30{z-index:30}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.order-3{order:3}.order-4{order:4}.order-5{order:5}.order-last{order:9999}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-1\.5{margin-left:.375rem;margin-right:.375rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-2\.5{margin-bottom:.625rem}.mb-3{margin-bottom:.75rem}.ml-1{margin-left:.25rem}.mt-0{margin-top:0}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.contents{display:contents}.hidden{display:none}.h-0{height:0}.h-0\.5{height:.125rem}.h-10{height:2.5rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-9{height:2.25rem}.h-\[360px\]{height:360px}.max-h-\[85vh\]{max-height:85vh}.min-h-\[40px\]{min-height:40px}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-2{width:.5rem}.w-2\.5{width:.625rem}.w-3{width:.75rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-\[1600px\]{max-width:1600px}.max-w-\[75\%\]{max-width:75%}.shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.list-decimal{list-style-type:decimal}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.gap-y-1{row-gap:.25rem}.gap-y-1\.5{row-gap:.375rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-dashed{border-style:dashed}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.border-amber-400\/30{border-color:rgba(251,191,36,.3)}.border-amber-400\/70{border-color:rgba(251,191,36,.7)}.border-conv{--tw-border-opacity:1;border-color:rgb(52 211 153/var(--tw-border-opacity,1))}.border-conv\/70{border-color:rgba(52,211,153,.7)}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153/var(--tw-border-opacity,1))}.border-emerald-400\/30{border-color:rgba(52,211,153,.3)}.border-emerald-400\/40{border-color:rgba(52,211,153,.4)}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-emerald-500\/20{border-color:rgba(16,185,129,.2)}.border-emerald-500\/25{border-color:rgba(16,185,129,.25)}.border-ghost{--tw-border-opacity:1;border-color:rgb(167 139 250/var(--tw-border-opacity,1))}.border-rose-400{--tw-border-opacity:1;border-color:rgb(251 113 133/var(--tw-border-opacity,1))}.border-rose-400\/30{border-color:rgba(251,113,133,.3)}.border-rose-400\/40{border-color:rgba(251,113,133,.4)}.border-sky-400{--tw-border-opacity:1;border-color:rgb(56 189 248/var(--tw-border-opacity,1))}.border-sky-400\/30{border-color:rgba(56,189,248,.3)}.border-sky-400\/60{border-color:rgba(56,189,248,.6)}.border-sky-500{--tw-border-opacity:1;border-color:rgb(14 165 233/var(--tw-border-opacity,1))}.border-sky-500\/25{border-color:rgba(14,165,233,.25)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-700\/60{border-color:rgba(51,65,85,.6)}.border-slate-700\/70{border-color:rgba(51,65,85,.7)}.border-slate-700\/80{border-color:rgba(51,65,85,.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.border-slate-800\/70{border-color:rgba(30,41,59,.7)}.border-slate-800\/80{border-color:rgba(30,41,59,.8)}.border-slate-800\/90{border-color:rgba(30,41,59,.9)}.border-transparent{border-color:transparent}.border-violet-400{--tw-border-opacity:1;border-color:rgb(167 139 250/var(--tw-border-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-400\/10{background-color:rgba(251,191,36,.1)}.bg-amber-400\/15{background-color:rgba(251,191,36,.15)}.bg-amber-400\/25{background-color:rgba(251,191,36,.25)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-500\/10{background-color:rgba(245,158,11,.1)}.bg-amber-500\/20{background-color:rgba(245,158,11,.2)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-conv{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-conv\/30{background-color:rgba(52,211,153,.3)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-400\/40{background-color:rgba(52,211,153,.4)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-emerald-500\/15{background-color:rgba(16,185,129,.15)}.bg-emerald-500\/20{background-color:rgba(16,185,129,.2)}.bg-err{--tw-bg-opacity:1;background-color:rgb(251 113 133/var(--tw-bg-opacity,1))}.bg-err\/80{background-color:rgba(251,113,133,.8)}.bg-fx{--tw-bg-opacity:1;background-color:rgb(56 189 248/var(--tw-bg-opacity,1))}.bg-navy-900{--tw-bg-opacity:1;background-color:rgb(11 16 32/var(--tw-bg-opacity,1))}.bg-navy-900\/85{background-color:rgba(11,16,32,.85)}.bg-navy-900\/90{background-color:rgba(11,16,32,.9)}.bg-navy-950{--tw-bg-opacity:1;background-color:rgb(7 11 22/var(--tw-bg-opacity,1))}.bg-navy-950\/60{background-color:rgba(7,11,22,.6)}.bg-navy-950\/70{background-color:rgba(7,11,22,.7)}.bg-navy-950\/85{background-color:rgba(7,11,22,.85)}.bg-navy-950\/90{background-color:rgba(7,11,22,.9)}.bg-rose-400{--tw-bg-opacity:1;background-color:rgb(251 113 133/var(--tw-bg-opacity,1))}.bg-rose-400\/15{background-color:rgba(251,113,133,.15)}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-rose-500\/15{background-color:rgba(244,63,94,.15)}.bg-rose-500\/20{background-color:rgba(244,63,94,.2)}.bg-sky-400{--tw-bg-opacity:1;background-color:rgb(56 189 248/var(--tw-bg-opacity,1))}.bg-sky-400\/15{background-color:rgba(56,189,248,.15)}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.bg-sky-500\/10{background-color:rgba(14,165,233,.1)}.bg-sky-500\/20{background-color:rgba(14,165,233,.2)}.bg-slate-500{--tw-bg-opacity:1;background-color:rgb(100 116 139/var(--tw-bg-opacity,1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-800\/80{background-color:rgba(30,41,59,.8)}.bg-slate-800\/90{background-color:rgba(30,41,59,.9)}.bg-tn{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-violet-500{--tw-bg-opacity:1;background-color:rgb(139 92 246/var(--tw-bg-opacity,1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-sky-500{--tw-gradient-from:#0ea5e9 var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,165,233,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-sky-500\/20{--tw-gradient-from:rgba(14,165,233,.2) var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,165,233,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-amber-400{--tw-gradient-to:#fbbf24 var(--tw-gradient-to-position)}.to-amber-400\/20{--tw-gradient-to:rgba(251,191,36,.2) var(--tw-gradient-to-position)}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0{padding-top:0;padding-bottom:0}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-3{padding-bottom:.75rem}.pl-5{padding-left:1.25rem}.pt-1{padding-top:.25rem}.pt-1\.5{padding-top:.375rem}.pt-2{padding-top:.5rem}.font-mono{font-family:JetBrains Mono,ui-monospace,monospace}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wider{letter-spacing:.05em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-navy-950{--tw-text-opacity:1;color:rgb(7 11 22/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-sky-200{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0_0_15px_rgba\(56\2c 189\2c 248\2c 0\.18\)\]{--tw-shadow:0 0 15px rgba(56,189,248,.18);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_6px_\#38bdf8\]{--tw-shadow:0 0 6px #38bdf8;--tw-shadow-colored:0 0 6px var(--tw-shadow-color)}.shadow-\[0_0_6px_\#38bdf8\],.shadow-\[0_0_6px_\#fbbf24\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_6px_\#fbbf24\]{--tw-shadow:0 0 6px #fbbf24;--tw-shadow-colored:0 0 6px var(--tw-shadow-color)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-inner,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-amber-500{--tw-shadow-color:#f59e0b;--tw-shadow:var(--tw-shadow-colored)}.shadow-amber-500\/20{--tw-shadow-color:rgba(245,158,11,.2);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.selection\:bg-sky-500\/30 ::-moz-selection{background-color:rgba(14,165,233,.3)}.selection\:bg-sky-500\/30 ::selection{background-color:rgba(14,165,233,.3)}.selection\:text-sky-200 ::-moz-selection{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.selection\:text-sky-200 ::selection{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.selection\:bg-sky-500\/30::-moz-selection{background-color:rgba(14,165,233,.3)}.selection\:bg-sky-500\/30::selection{background-color:rgba(14,165,233,.3)}.selection\:text-sky-200::-moz-selection{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.selection\:text-sky-200::selection{--tw-text-opacity:1;color:rgb(186 230 253/var(--tw-text-opacity,1))}.after\:absolute:after{content:var(--tw-content);position:absolute}.after\:left-0\.5:after{content:var(--tw-content);left:.125rem}.after\:top-0\.5:after{content:var(--tw-content);top:.125rem}.after\:h-5:after{content:var(--tw-content);height:1.25rem}.after\:w-5:after{content:var(--tw-content);width:1.25rem}.after\:rounded-full:after{content:var(--tw-content);border-radius:9999px}.after\:bg-white:after{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.after\:transition-transform:after{content:var(--tw-content);transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.after\:content-\[\'\'\]:after{--tw-content:"";content:var(--tw-content)}.hover\:border-slate-700:hover{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77/var(--tw-bg-opacity,1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.hover\:bg-slate-700\/80:hover{background-color:rgba(51,65,85,.8)}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-slate-800\/80:hover{background-color:rgba(30,41,59,.8)}.hover\:text-slate-200:hover{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.peer:checked~.peer-checked\:bg-emerald-500\/80{background-color:rgba(16,185,129,.8)}.peer:checked~.peer-checked\:bg-rose-500\/80{background-color:rgba(244,63,94,.8)}.peer:checked~.peer-checked\:bg-violet-500\/80{background-color:rgba(139,92,246,.8)}.peer:checked~.peer-checked\:after\:translate-x-5:after{content:var(--tw-content);--tw-translate-x:1.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.peer:focus-visible~.peer-focus-visible\:ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.peer:focus-visible~.peer-focus-visible\:ring-sky-400{--tw-ring-opacity:1;--tw-ring-color:rgb(56 189 248/var(--tw-ring-opacity,1))}@media (min-width:640px){.sm\:bottom-auto{bottom:auto}.sm\:top-3{top:.75rem}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:hidden{display:none}.sm\:h-\[460px\]{height:460px}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:gap-3{gap:.75rem}.sm\:gap-5{gap:1.25rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xs{font-size:.75rem;line-height:1rem}}@media (min-width:1024px){.lg\:order-none{order:0}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:flex{display:flex}.lg\:h-\[520px\]{height:520px}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:flex-col{flex-direction:column}}</style>
+
+  <!-- Typography: Inter (UI), STIX Two Text (3Blue1Brown-style Math Serif), JetBrains Mono (Numerical Readouts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+
+  <style>
+    /* Custom 3Blue1Brown-inspired dark math styling & custom range sliders */
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: #070b16;
+      color: #e2e8f0;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Crisp math typography helpers */
+    .math-serif {
+      font-family: 'STIX Two Text', Georgia, serif;
+    }
+
+    .math-frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: middle;
+      margin: 0 0.14em;
+      line-height: 1.05;
+      font-size: 0.9em;
+    }
+    .math-frac > span:first-child {
+      border-bottom: 1px solid currentColor;
+      padding: 0 0.2em 0.08em;
+    }
+    .math-frac > span:last-child {
+      padding: 0.08em 0.2em 0;
+    }
+
+    /* Custom polished range sliders */
+    input[type="range"].math-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 9999px;
+      background: #1c2a4a;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"].math-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--thumb-color, #fbbf24);
+      border: 2px solid #0b1020;
+      box-shadow: 0 0 10px var(--thumb-glow, rgba(251, 191, 36, 0.55));
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    input[type="range"].math-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    input[type="range"].math-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--thumb-color, #fbbf24);
+      border: 2px solid #0b1020;
+      box-shadow: 0 0 10px var(--thumb-glow, rgba(251, 191, 36, 0.55));
+      transition: transform 0.12s ease;
+    }
+
+    /* Subtle scrollbar for symbolic polynomial overflow */
+    .thin-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .thin-scroll::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 9999px;
+    }
+    .thin-scroll::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.3);
+      border-radius: 9999px;
+    }
+    .thin-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(148, 163, 184, 0.5);
+    }
+
+    /* Canvas container styling */
+    #canvasWrapper {
+      position: relative;
+      background: radial-gradient(circle at 50% 45%, #0f172e 0%, #0b1020 70%, #080c18 100%);
+      touch-action: none; /* Enables smooth custom touch pan & probe drag */
+    }
+
+    #mathCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Subtle glass panel borders */
+    .panel-card {
+      background: linear-gradient(180deg, rgba(19, 29, 53, 0.85) 0%, rgba(13, 20, 38, 0.92) 100%);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Visible keyboard focus everywhere */
+    :focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; border-radius: 6px; }
+    input[type="range"].math-slider { height: 8px; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+    /* Toggle switch styling */
+    .toggle-track {
+      transition: background-color 0.2s ease;
+    }
+    .toggle-dot {
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-sky-500/30 selection:text-sky-200">
+
+  <!-- Top Header Bar -->
+  <header class="border-b border-slate-800/80 bg-navy-900/90 backdrop-blur-md sticky top-0 z-30">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <!-- Inline SVG Mathematical Sigma/Curve Emblem -->
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-500/20 to-amber-400/20 border border-sky-400/30 flex items-center justify-center shadow-inner">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 17 C7 5, 11 5, 15 12 C18 17, 20 14, 21 9" stroke="#38bdf8" stroke-linecap="round"/>
+            <path d="M3 15 C8 8, 12 8, 16 14 C18.5 17.5, 20 15, 21 12" stroke="#fbbf24" stroke-dasharray="2.5 2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-semibold tracking-tight text-slate-100 leading-tight">
+            Calculus II: Taylor Series Explorer
+          </h1>
+          <p class="text-xs text-slate-400 hidden sm:block">
+            Exact derivatives &bull; Smooth degree-by-degree animation &bull; Live error-bound checks
+          </p>
+        </div>
+      </div>
+
+      <!-- Header Right Status Pill -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div id="headerProofBadge" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-400/30">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>4/4 checks pass</span>
+        </div>
+        <a href="gif.html" class="px-3 py-2 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700/80 text-sky-300 border border-slate-700 transition">Make a GIF &rarr;</a>
+        <button id="btnInfoModal" type="button" class="px-3 py-2 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700 transition">
+          How it works
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Responsive Content Grid -->
+  <main class="max-w-[1600px] mx-auto px-3 sm:px-6 py-4 sm:py-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-start">
+
+      <!-- LEFT COLUMN (Canvas + Transport + Symbolic Series) -->
+      <section class="contents lg:col-span-8 lg:flex lg:flex-col gap-4 min-w-0">
+
+        <!-- Interactive Visualization Canvas Card -->
+        <div class="order-1 lg:order-none panel-card rounded-2xl overflow-hidden flex flex-col">
+          <!-- Canvas Viewport -->
+          <div id="canvasWrapper" class="w-full h-[360px] sm:h-[460px] lg:h-[520px] select-none">
+            <canvas id="mathCanvas" role="img" aria-label="Graph of f(x) and its Taylor polynomial"></canvas>
+
+            <!-- Top-Left Floating Legend -->
+            <div class="absolute top-3 left-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 px-3 py-2 rounded-xl bg-navy-900/85 backdrop-blur-md border border-slate-700/60 text-xs sm:text-xs pointer-events-none shadow-lg max-w-[75%]">
+              <span class="inline-flex items-center gap-1.5 text-slate-200">
+                <span class="w-3.5 h-0.5 bg-fx rounded-full shadow-[0_0_6px_#38bdf8]"></span>
+                <span class="math-serif italic text-sky-300" id="legendFx">f(x) = sin(x)</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-slate-200">
+                <span class="w-3.5 h-0.5 bg-tn rounded-full shadow-[0_0_6px_#fbbf24]"></span>
+                <span class="math-serif italic text-amber-300" id="legendTn">T₀(x)</span>
+              </span>
+              <span id="legendErrWrap" class="inline-flex items-center gap-1.5 text-slate-300">
+                <span class="w-2.5 h-2.5 rounded-full bg-err/80"></span>
+                <span>Error |R<sub>n</sub>(x₀)|</span>
+              </span>
+              <span id="legendConvWrap" class="inline-flex items-center gap-1.5 text-slate-300">
+                <span class="w-2.5 h-2.5 rounded-sm bg-conv/30 border border-conv/70"></span>
+                <span>Conv. |x&minus;a| &lt; R</span>
+              </span>
+              <span id="legendLooseWrap" class="hidden inline-flex items-center gap-1.5 text-slate-300">
+                <span class="w-2.5 h-2.5 rounded-sm bg-amber-400/25 border border-amber-400/70"></span>
+                <span>Bound too loose</span>
+              </span>
+              <span id="legendGhostWrap" class="hidden inline-flex items-center gap-1.5 text-slate-300">
+                <span class="w-3.5 h-0.5 border-t-2 border-dashed border-ghost"></span>
+                <span>Next Term</span>
+              </span>
+            </div>
+
+            <!-- Top-Right Canvas Camera Controls -->
+            <div class="absolute bottom-12 right-3 sm:bottom-auto sm:top-3 flex items-center gap-1.5">
+              <button id="btnZoomIn" title="Zoom in" aria-label="Zoom in" type="button" class="w-10 h-10 rounded-lg bg-navy-900/85 hover:bg-slate-800 border border-slate-700/70 text-slate-200 flex items-center justify-center text-sm font-semibold backdrop-blur-md transition active:scale-95">+</button>
+              <button id="btnZoomOut" title="Zoom out" aria-label="Zoom out" type="button" class="w-10 h-10 rounded-lg bg-navy-900/85 hover:bg-slate-800 border border-slate-700/70 text-slate-200 flex items-center justify-center text-sm font-semibold backdrop-blur-md transition active:scale-95">&minus;</button>
+              <button id="btnResetView" title="Reset view" type="button" class="px-3 h-10 rounded-lg bg-navy-900/85 hover:bg-slate-800 border border-slate-700/70 text-slate-300 text-xs font-medium backdrop-blur-md transition active:scale-95">Reset View</button>
+            </div>
+
+            <!-- Bottom-Left Live Animation Phase Pill -->
+            <div class="absolute bottom-3 left-3 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-navy-900/85 backdrop-blur-md border border-slate-700/60 text-xs pointer-events-none">
+              <span id="animDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+              <span id="animStatusText" class="font-mono text-slate-200">n = 0 &rarr; 1</span>
+              <span class="text-slate-400 hidden sm:inline">&bull;</span>
+              <span class="text-slate-400 text-xs hidden sm:inline">Drag the coral dot to move x₀ · drag elsewhere to pan</span>
+            </div>
+          </div>
+
+          <!-- Animation Transport & Mode Strip -->
+          <div class="px-4 py-3 bg-navy-900/90 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+            <!-- Play / Step / Reset Controls -->
+            <div class="flex items-center gap-2">
+              <button id="btnPlayPause" type="button" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold bg-amber-400 hover:bg-amber-300 text-navy-950 shadow-lg shadow-amber-500/20 transition active:scale-95">
+                <svg id="iconPause" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                <svg id="iconPlay" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 001.52.85l11.02-6.86a1 1 0 000-1.7L9.52 4.29A1 1 0 008 5.14z"/></svg>
+                <span id="playPauseLabel">Pause</span>
+              </button>
+
+              <button id="btnStepBack" title="Previous degree" aria-label="Previous degree" type="button" class="p-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700/80 transition active:scale-95">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button id="btnStepFwd" title="Next degree" aria-label="Next degree" type="button" class="p-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700/80 transition active:scale-95">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button id="btnResetAnim" title="Back to n = 0" type="button" class="px-3 py-3 rounded-xl text-xs font-medium bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700/80 transition active:scale-95">
+                Reset n=0
+              </button>
+            </div>
+
+            <p class="w-full sm:hidden order-last text-xs text-slate-400">Drag the coral dot to move the probe x₀. Drag anywhere else to pan.</p>
+
+            <!-- Morph Mode & Speed Selector -->
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+              <!-- Smooth Morph vs Discrete Step Toggle -->
+              <div class="inline-flex rounded-xl bg-navy-950/90 p-1 border border-slate-800 text-xs">
+                <button id="btnModeSmooth" type="button" class="px-3 py-2 rounded-lg font-medium transition bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  Smooth Morph
+                </button>
+                <button id="btnModeDiscrete" type="button" class="px-3 py-2 rounded-lg font-medium transition text-slate-400 hover:text-slate-200 border border-transparent">
+                  Discrete Step
+                </button>
+              </div>
+
+              <!-- Speed Control -->
+              <div class="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-navy-950/90 px-2.5 py-1 rounded-xl border border-slate-800">
+                <span>Speed</span>
+                <select id="selectSpeed" aria-label="Animation speed" class="bg-transparent text-amber-300 font-mono font-medium focus:outline-none cursor-pointer">
+                  <option value="0.5" class="bg-navy-900">0.5&times;</option>
+                  <option value="1" selected class="bg-navy-900">1.0&times;</option>
+                  <option value="1.75" class="bg-navy-900">1.75&times;</option>
+                  <option value="2.5" class="bg-navy-900">2.5&times;</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Symbolic Taylor Polynomial & Convergence Metadata Card -->
+        <div class="order-4 lg:order-none panel-card rounded-2xl p-4 sm:p-5">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <h2 class="text-sm font-semibold text-slate-200">Taylor polynomial</h2>
+              <span id="seriesTypeBadge" class="whitespace-nowrap px-2 py-0.5 rounded-md text-xs font-medium bg-amber-400/15 text-amber-300 border border-amber-400/30">
+                Maclaurin (a = 0)
+              </span>
+            </div>
+
+            <!-- Convergence Badges -->
+            <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/25">
+                R = <span id="metaRadius">&infin;</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-sky-500/10 text-sky-300 border border-sky-500/25">
+                I = <span id="metaInterval">(&minus;&infin;, &infin;)</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-slate-300 border border-slate-700/70">
+                Dom: <span id="metaDomain">&Ropf;</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Rendered Symbolic Polynomial Container -->
+          <div id="symbolicFormulaBox" class="w-full overflow-x-auto thin-scroll rounded-xl bg-navy-950/90 border border-slate-800/90 px-4 py-3.5 text-base sm:text-lg math-serif text-slate-100 leading-relaxed whitespace-nowrap">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- General Term & Remainder Bound Formula Strip -->
+          <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <div class="rounded-xl bg-navy-950/60 border border-slate-800/70 px-3 py-2 flex items-center justify-between gap-2">
+              <span class="text-slate-400">Exact k-th Coefficient:</span>
+              <span id="metaCoeffFormula" class="math-serif text-sm text-amber-200"></span>
+            </div>
+            <div class="rounded-xl bg-navy-950/60 border border-slate-800/70 px-3 py-2 flex items-center justify-between gap-2">
+              <span class="text-slate-400">Lagrange Bound B<sub>n</sub>(x):</span>
+              <span id="metaBoundFormula" class="math-serif text-sm text-rose-300"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN (Function Selector + Interactive Controls + Live Math Verification Panel) -->
+      <aside class="contents lg:col-span-4 lg:flex lg:flex-col gap-4 min-w-0">
+
+        <!-- 1. Canonical Calculus 2 Function Selector -->
+        <div class="order-2 lg:order-none panel-card rounded-2xl p-4">
+          <div class="flex items-center justify-between mb-2.5">
+            <h2 class="text-sm font-semibold text-slate-200">Function <span class="math-serif italic">f(x)</span></h2>
+            
+          </div>
+          <div id="functionButtons" class="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-3 gap-2">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- 2. Interactive Parameters & Visual Overlays -->
+        <div class="order-3 lg:order-none panel-card rounded-2xl p-4 flex flex-col gap-4">
+          <h2 class="text-sm font-semibold text-slate-200">Controls</h2>
+
+          <!-- Degree n Slider -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="sliderN" class="text-xs font-medium text-slate-300">
+                Polynomial Degree <span class="math-serif italic text-amber-300 text-sm">n</span>
+              </label>
+              <span id="valN" class="font-mono text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-400/15 text-amber-300 border border-amber-400/30">n = 0</span>
+            </div>
+            <input id="sliderN" type="range" min="0" max="15" step="1" value="0" class="math-slider" style="--thumb-color:#fbbf24; --thumb-glow:rgba(251,191,36,0.55);" />
+            <div class="flex justify-between text-xs font-mono text-slate-400 mt-1">
+              <span>0</span><span>5</span><span>10</span><span>15</span>
+            </div>
+          </div>
+
+          <!-- Center a Slider -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5 gap-2">
+              <label for="sliderA" class="text-xs font-medium text-slate-300">
+                Expansion Center <span class="math-serif italic text-sky-300 text-sm">a</span>
+              </label>
+              <div class="flex items-center gap-1.5">
+                <span id="valA" class="font-mono text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-400/15 text-sky-300 border border-sky-400/30">a = 0.00</span>
+                <button id="btnResetA" type="button" class="text-xs px-2.5 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">
+                  a = 0
+                </button>
+              </div>
+            </div>
+            <input id="sliderA" type="range" min="-3" max="3" step="0.05" value="0" class="math-slider" style="--thumb-color:#38bdf8; --thumb-glow:rgba(56,189,248,0.55);" />
+            <div class="flex justify-between text-xs font-mono text-slate-400 mt-1">
+              <span id="labelAMin">-3.0</span>
+              <span class="text-slate-400">Maclaurin at 0</span>
+              <span id="labelAMax">3.0</span>
+            </div>
+          </div>
+
+          <!-- Probe Point x0 Slider -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="sliderX0" class="text-xs font-medium text-slate-300">
+                Evaluation Probe <span class="math-serif italic text-rose-300 text-sm">x₀</span>
+                <span class="text-xs text-slate-400 ml-1">(draggable on graph)</span>
+              </label>
+              <span id="valX0" class="font-mono text-xs font-semibold px-2 py-0.5 rounded-md bg-rose-400/15 text-rose-300 border border-rose-400/30">x₀ = 2.50</span>
+            </div>
+            <input id="sliderX0" type="range" min="-6" max="6" step="0.02" value="2.5" class="math-slider" style="--thumb-color:#fb7185; --thumb-glow:rgba(251,113,133,0.55);" />
+            <div class="flex justify-between text-xs font-mono text-slate-400 mt-1">
+              <span id="labelX0Min">-6.0</span>
+              <span id="probeConvStatus" class="text-emerald-400">Inside Convergence Zone</span>
+              <span id="labelX0Max">6.0</span>
+            </div>
+          </div>
+
+          <!-- Visual Overlay Toggles -->
+          <div class="pt-2 border-t border-slate-800/80 flex flex-col gap-2.5">
+            <label class="flex items-center justify-between gap-3 cursor-pointer select-none group min-h-[40px]">
+              <span class="text-xs text-slate-300 group-hover:text-slate-100 transition flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-sm bg-emerald-400/40 border border-emerald-400"></span>
+                <span>Convergence interval shading</span>
+              </span>
+              <input id="toggleConv" type="checkbox" checked class="sr-only peer" />
+              <div aria-hidden="true" class="shrink-0 w-11 h-6 bg-slate-700 peer-checked:bg-emerald-500/80 rounded-full relative transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-sky-400 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-5 after:h-5 after:bg-white after:rounded-full after:transition-transform peer-checked:after:translate-x-5"></div>
+            </label>
+
+            <label class="flex items-center justify-between gap-3 cursor-pointer select-none group min-h-[40px]">
+              <span class="text-xs text-slate-300 group-hover:text-slate-100 transition flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                <span>Probe x₀ error readout</span>
+              </span>
+              <input id="toggleProbe" type="checkbox" checked class="sr-only peer" />
+              <div aria-hidden="true" class="shrink-0 w-11 h-6 bg-slate-700 peer-checked:bg-rose-500/80 rounded-full relative transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-sky-400 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-5 after:h-5 after:bg-white after:rounded-full after:transition-transform peer-checked:after:translate-x-5"></div>
+            </label>
+
+            <label class="flex items-center justify-between gap-3 cursor-pointer select-none group min-h-[40px]">
+              <span class="text-xs text-slate-300 group-hover:text-slate-100 transition flex items-center gap-2">
+                <span class="w-3 h-0.5 border-t-2 border-dashed border-violet-400"></span>
+                <span>Next-term preview <span class="math-serif italic">c<sub>n+1</sub>(x&minus;a)<sup>n+1</sup></span></span>
+              </span>
+              <input id="toggleGhost" type="checkbox" class="sr-only peer" />
+              <div aria-hidden="true" class="shrink-0 w-11 h-6 bg-slate-700 peer-checked:bg-violet-500/80 rounded-full relative transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-sky-400 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-5 after:h-5 after:bg-white after:rounded-full after:transition-transform peer-checked:after:translate-x-5"></div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 3. BUILT-IN LIVE MATHEMATICAL VERIFICATION PANEL -->
+        <div class="order-5 lg:order-none panel-card rounded-2xl p-4 border-emerald-500/20">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <h2 class="text-sm font-semibold text-emerald-300 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Live Math Checks
+              </h2>
+              <p id="verifyContext" class="text-xs text-slate-400 font-mono mt-0.5">Checking exact integer T₀(x) at a = 0.00</p>
+            </div>
+            <span id="overallVerifyPill" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">
+              PASS
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-2.5 text-xs">
+
+            <!-- Assertion 1: Center Exactness -->
+            <div class="rounded-xl bg-navy-950/85 border border-slate-800/90 p-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-medium text-slate-200">1. Starting values</span>
+                <span id="badgeCheck1" class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300">PASS</span>
+              </div>
+              <div class="mt-1 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>c₀ = f(a), c₁ = numeric slope of f</span>
+                <span id="detailCheck1" class="text-slate-200">0.00e+0</span>
+              </div>
+            </div>
+
+            <!-- Assertion 2: Derivative Matching k = 0..n -->
+            <div class="rounded-xl bg-navy-950/85 border border-slate-800/90 p-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-medium text-slate-200">2. Obeys f's differential equation</span>
+                <span id="badgeCheck2" class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300">PASS</span>
+              </div>
+              <div class="mt-1 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span id="odeLabel">f'' = −f, all c₀…cₙ</span>
+                <span id="detailCheck2" class="text-slate-200">0.00e+0</span>
+              </div>
+            </div>
+
+            <!-- Assertion 3: 100-point Lagrange remainder check -->
+            <div class="rounded-xl bg-navy-950/85 border border-slate-800/90 p-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-medium text-slate-200">3. Error bound at 100 points</span>
+                <span id="badgeCheck3" class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300">PASS</span>
+              </div>
+              <div class="mt-1 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span id="domainCheck3">|R<sub>n</sub>(x)| &le; B<sub>n</sub>(x) + 10<sup>&minus;12</sup></span>
+                <span id="detailCheck3" class="text-emerald-300">100/100</span>
+              </div>
+              <div class="mt-1 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>Max ratio |R<sub>n</sub>(x)| / B<sub>n</sub>(x)</span>
+                <span id="ratioCheck3" class="text-amber-300">0.0000</span>
+              </div>
+              <div id="looseRow3" class="hidden mt-1 flex items-center justify-between text-xs font-mono text-amber-300">
+                <span>Points where bound is too loose</span>
+                <span id="looseCheck3">0</span>
+              </div>
+            </div>
+
+            <!-- Assertion 4: Probe Point Exact Error vs Theoretical Bound -->
+            <div class="rounded-xl bg-navy-950/85 border border-slate-800/90 p-2.5">
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="font-medium text-slate-200">4. Probe x₀: error vs. bound</span>
+                <span id="badgeCheck4" class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300">PASS</span>
+              </div>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-1 font-mono text-xs">
+                <div class="flex justify-between text-slate-400">
+                  <span>f(x₀):</span>
+                  <span id="probeFxVal" class="text-sky-300">--</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>T<sub>n</sub>(x₀):</span>
+                  <span id="probeTnVal" class="text-amber-300">--</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>|R<sub>n</sub>(x₀)|:</span>
+                  <span id="probeErrVal" class="text-rose-300">--</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>B<sub>n</sub>(x₀):</span>
+                  <span id="probeBoundVal" class="text-emerald-300">--</span>
+                </div>
+              </div>
+              <div id="probeBoundNote" class="mt-1.5 pt-1.5 border-t border-slate-800/70 text-xs font-mono text-slate-400">
+                Verified: |R<sub>n</sub>(x₀)| &le; B<sub>n</sub>(x₀)
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- How It Works modal -->
+  <div id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+    <div class="panel-card rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto thin-scroll p-5 sm:p-6 border border-slate-700/80">
+      <div class="flex items-center justify-between gap-4 pb-3 border-b border-slate-800">
+        <h3 id="infoModalTitle" class="text-base sm:text-lg font-semibold text-slate-100">How the math works &amp; what the checks mean</h3>
+        <button id="btnCloseModal" type="button" aria-label="Close" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xl flex items-center justify-center">&times;</button>
+      </div>
+      <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+        <section>
+          <h4 class="font-semibold text-slate-100 mb-1">The curves</h4>
+          <p>The gold curve is the degree-<i>n</i> Taylor polynomial <span class="math-serif italic">T<sub>n</sub>(x) = &sum; f<sup>(k)</sup>(a)/k! &middot; (x &minus; a)<sup>k</sup></span>, built from exact closed-form derivatives (no numerical differentiation). Factorials up to 16! are exact in JavaScript numbers. Between whole degrees, the animation blends <span class="math-serif italic">T<sub>n</sub> + s&middot;c<sub>n+1</sub>(x &minus; a)<sup>n+1</sup></span>; those in-between curves are a visual transition, not Taylor polynomials.</p>
+        </section>
+        <section>
+          <h4 class="font-semibold text-slate-100 mb-1">What each check does</h4>
+          <ol class="list-decimal pl-5 space-y-1.5">
+            <li><b>Starting values.</b> c<sub>0</sub> equals f(a), and c<sub>1</sub> matches a numerical slope of f computed directly from f, not from the derivative formulas.</li>
+            <li><b>Differential equation.</b> Each function solves a simple equation (sin, cos: f&Prime; = &minus;f; e<sup>x</sup>: f&prime; = f; ln(1+x): (1+x)f&Prime; + f&prime; = 0; 1/(1&minus;x): (1&minus;x)f&prime; = f). That equation forces a recurrence between neighbouring coefficients. Checks 1 and 2 together pin down every coefficient uniquely, so a wrong sign or missing factorial fails here.</li>
+            <li><b>Error bound at 100 points.</b> Taylor's theorem (Lagrange form) says |f(x) &minus; T<sub>n</sub>(x)| &le; max|f<sup>(n+1)</sup>| &middot; |x &minus; a|<sup>n+1</sup>/(n+1)!. The app checks the actual error against this bound across the convergence zone.</li>
+            <li><b>Probe.</b> The same comparison at the point x<sub>0</sub> you choose.</li>
+          </ol>
+        </section>
+        <section>
+          <h4 class="font-semibold text-slate-100 mb-1">What the checks don't prove</h4>
+          <p>They're computer checks at sample points, done in 64-bit floating point. They catch mistakes in the formulas and the code, but they aren't a written proof. The proof is Taylor's theorem itself; the checks confirm this program follows it.</p>
+        </section>
+        <section class="rounded-xl bg-amber-500/10 border border-amber-400/30 p-3">
+          <h4 class="font-semibold text-amber-200 mb-1">The amber "bound too loose" zone</h4>
+          <p>For ln(1+x) and 1/(1&minus;x), part of the convergence interval is hatched amber. There the Lagrange bound is still true, but it <i>grows</i> as n increases, so it can't show the series converges. The series does converge there (watch the actual error shrink); proving it needs another tool, such as the geometric series or the integral form of the remainder. At a = 0 that zone is &minus;1 &lt; x &le; &minus;&frac12; for ln(1+x), and &frac12; &le; x &lt; 1 for 1/(1&minus;x).</p>
+        </section>
+        <section>
+          <h4 class="font-semibold text-slate-100 mb-1">Endpoints</h4>
+          <p>ln(1+x) converges at the right endpoint (alternating harmonic series) and diverges at x = &minus;1. 1/(1&minus;x) diverges at both endpoints. sin, cos and e<sup>x</sup> converge for every x.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Script -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* =========================================================================
+       * 1. EXACT MATHEMATICAL CONSTANTS & FACTORIAL TABLE (0! through 16!)
+       *    16! = 20,922,789,888,000 < Number.MAX_SAFE_INTEGER (9,007,199,254,740,991)
+       *    Therefore every factorial up to 16! is exact in IEEE-754 float64.
+       * ========================================================================= */
+      const MAX_DEGREE = 15;
+      const FACTORIALS = new Array(MAX_DEGREE + 2);
+      FACTORIALS[0] = 1;
+      for (let k = 1; k <= MAX_DEGREE + 1; k++) {
+        FACTORIALS[k] = FACTORIALS[k - 1] * k;
+      }
+
+      /* =========================================================================
+       * 2. CANONICAL CALCULUS 2 FUNCTION DEFINITIONS (closed-form derivatives)
+       * ========================================================================= */
+      const FUNCTIONS = {
+        sin: {
+          id: 'sin',
+          labelHtml: 'sin(x)',
+          legendText: 'f(x) = sin(x)',
+          domainText: 'ℝ',
+          asymptote: null,
+          aDefault: 0,
+          aMin: -3,
+          aMax: 3,
+          x0Default: 2.5,
+          x0Min: -6.5,
+          x0Max: 6.5,
+          piTicks: true,
+          defaultView: { xMin: -7.2, xMax: 7.2, yMin: -2.6, yMax: 2.6 },
+          coeffFormulaHtml: 'f<sup>(k)</sup>(a) / k! &nbsp;(4-cycle)',
+          boundFormulaHtml: '|x &minus; a|<sup>n+1</sup> / (n+1)!',
+          f(x) {
+            return Math.sin(x);
+          },
+          // Exact k mod 4 cycle avoids Math.sin(a + k*PI/2) rounding noise
+          deriv(k, a) {
+            const m = k % 4;
+            if (m === 0) return Math.sin(a);
+            if (m === 1) return Math.cos(a);
+            if (m === 2) return -Math.sin(a);
+            return -Math.cos(a);
+          },
+          coeff(k, a) {
+            return this.deriv(k, a) / FACTORIALS[k];
+          },
+          radius() {
+            return Infinity;
+          },
+          intervalText() {
+            return '(−∞, ∞)';
+          },
+          isInsideConv() {
+            return true;
+          },
+          isDomainValid() {
+            return true;
+          },
+          // |f^(n+1)(t)| <= 1 for all real t
+          // Independent check: f'' = -f  =>  (k+2)(k+1) c_{k+2} = -c_k
+          odeOrder: 2,
+          ode(c, k) { return [(k + 2) * (k + 1) * c[k + 2], -c[k]]; },
+          odeText: "f'' = −f",
+          looseZone() { return null; },
+          lagrangeBound(x, a, n) {
+            return Math.pow(Math.abs(x - a), n + 1) / FACTORIALS[n + 1];
+          },
+          maclaurinTermHtml(k) {
+            if (k % 2 === 0) return null; // zero term
+            const sign = ((k - 1) / 2) % 2 === 0 ? 1 : -1;
+            if (k === 1) return { sign, body: 'x' };
+            return {
+              sign,
+              body: `<span class="math-frac"><span>x<sup>${k}</sup></span><span>${k}!</span></span>`
+            };
+          }
+        },
+
+        cos: {
+          id: 'cos',
+          labelHtml: 'cos(x)',
+          legendText: 'f(x) = cos(x)',
+          domainText: 'ℝ',
+          asymptote: null,
+          aDefault: 0,
+          aMin: -3,
+          aMax: 3,
+          x0Default: 2.5,
+          x0Min: -6.5,
+          x0Max: 6.5,
+          piTicks: true,
+          defaultView: { xMin: -7.2, xMax: 7.2, yMin: -2.6, yMax: 2.6 },
+          coeffFormulaHtml: 'f<sup>(k)</sup>(a) / k! &nbsp;(4-cycle)',
+          boundFormulaHtml: '|x &minus; a|<sup>n+1</sup> / (n+1)!',
+          f(x) {
+            return Math.cos(x);
+          },
+          // Exact k mod 4 cycle: [cos(a), -sin(a), -cos(a), sin(a)]
+          deriv(k, a) {
+            const m = k % 4;
+            if (m === 0) return Math.cos(a);
+            if (m === 1) return -Math.sin(a);
+            if (m === 2) return -Math.cos(a);
+            return Math.sin(a);
+          },
+          coeff(k, a) {
+            return this.deriv(k, a) / FACTORIALS[k];
+          },
+          radius() {
+            return Infinity;
+          },
+          intervalText() {
+            return '(−∞, ∞)';
+          },
+          isInsideConv() {
+            return true;
+          },
+          isDomainValid() {
+            return true;
+          },
+          // Independent check: f'' = -f  =>  (k+2)(k+1) c_{k+2} = -c_k
+          odeOrder: 2,
+          ode(c, k) { return [(k + 2) * (k + 1) * c[k + 2], -c[k]]; },
+          odeText: "f'' = −f",
+          looseZone() { return null; },
+          lagrangeBound(x, a, n) {
+            return Math.pow(Math.abs(x - a), n + 1) / FACTORIALS[n + 1];
+          },
+          maclaurinTermHtml(k) {
+            if (k % 2 === 1) return null; // zero term
+            const sign = (k / 2) % 2 === 0 ? 1 : -1;
+            if (k === 0) return { sign, body: '1' };
+            return {
+              sign,
+              body: `<span class="math-frac"><span>x<sup>${k}</sup></span><span>${k}!</span></span>`
+            };
+          }
+        },
+
+        exp: {
+          id: 'exp',
+          labelHtml: 'e<sup>x</sup>',
+          legendText: 'f(x) = eˣ',
+          domainText: 'ℝ',
+          asymptote: null,
+          aDefault: 0,
+          aMin: -2,
+          aMax: 2,
+          x0Default: 1.6,
+          x0Min: -3.5,
+          x0Max: 3.5,
+          piTicks: false,
+          defaultView: { xMin: -3.6, xMax: 3.6, yMin: -2.2, yMax: 8.2 },
+          coeffFormulaHtml: 'e<sup>a</sup> / k!',
+          boundFormulaHtml: 'e<sup>max(a,x)</sup> &middot; |x &minus; a|<sup>n+1</sup> / (n+1)!',
+          f(x) {
+            return Math.exp(x);
+          },
+          deriv(k, a) {
+            return Math.exp(a);
+          },
+          coeff(k, a) {
+            return Math.exp(a) / FACTORIALS[k];
+          },
+          radius() {
+            return Infinity;
+          },
+          intervalText() {
+            return '(−∞, ∞)';
+          },
+          isInsideConv() {
+            return true;
+          },
+          isDomainValid() {
+            return true;
+          },
+          // Independent check: f' = f  =>  (k+1) c_{k+1} = c_k
+          odeOrder: 1,
+          ode(c, k) { return [(k + 1) * c[k + 1], c[k]]; },
+          odeText: "f' = f",
+          looseZone() { return null; },
+          lagrangeBound(x, a, n) {
+            return Math.exp(Math.max(a, x)) * Math.pow(Math.abs(x - a), n + 1) / FACTORIALS[n + 1];
+          },
+          maclaurinTermHtml(k) {
+            if (k === 0) return { sign: 1, body: '1' };
+            if (k === 1) return { sign: 1, body: 'x' };
+            return {
+              sign: 1,
+              body: `<span class="math-frac"><span>x<sup>${k}</sup></span><span>${k}!</span></span>`
+            };
+          }
+        },
+
+        ln1px: {
+          id: 'ln1px',
+          labelHtml: 'ln(1+x)',
+          legendText: 'f(x) = ln(1 + x)',
+          domainText: 'x > −1',
+          asymptote: -1,
+          aDefault: 0,
+          aMin: -0.5,
+          aMax: 2.5,
+          x0Default: 0.75,
+          x0Min: -0.92,
+          x0Max: 3.8,
+          piTicks: false,
+          defaultView: { xMin: -2.0, xMax: 4.2, yMin: -3.0, yMax: 2.6 },
+          coeffFormulaHtml: '(&minus;1)<sup>k&minus;1</sup> / [k(1+a)<sup>k</sup>] &nbsp;(k&ge;1)',
+          boundFormulaHtml: '[1/(n+1)] &middot; (|x&minus;a| / (1+min(a,x)))<sup>n+1</sup>',
+          f(x) {
+            return x > -1 ? Math.log(1 + x) : NaN;
+          },
+          deriv(k, a) {
+            if (k === 0) return Math.log(1 + a);
+            const sign = (k % 2 === 1) ? 1 : -1;
+            return sign * FACTORIALS[k - 1] / Math.pow(1 + a, k);
+          },
+          coeff(k, a) {
+            if (k === 0) return Math.log(1 + a);
+            const sign = (k % 2 === 1) ? 1 : -1;
+            return sign / (k * Math.pow(1 + a, k));
+          },
+          radius(a) {
+            return 1 + a;
+          },
+          intervalText(a) {
+            const right = 1 + 2 * a;
+            return `(−1, ${formatCleanNum(right)}]`;
+          },
+          isInsideConv(x, a) {
+            return x > -1 && x <= 1 + 2 * a + 1e-12;
+          },
+          isDomainValid(x) {
+            return x > -1;
+          },
+          // Independent check: (1+x) f'' + f' = 0  =>  (1+a)(k+2) c_{k+2} = -(k+1) c_{k+1}
+          odeOrder: 2,
+          ode(c, k, a) { return [(1 + a) * (k + 2) * c[k + 2], -(k + 1) * c[k + 1]]; },
+          odeText: "(1+x)f'' + f' = 0",
+          // Where |x−a| / (1+min(a,x)) ≥ 1 the Lagrange bound grows with n (series still converges)
+          looseZone(a) { return [-1, (a - 1) / 2]; },
+          lagrangeBound(x, a, n) {
+            if (x <= -1 || a <= -1) return NaN;
+            const denom = 1 + Math.min(a, x);
+            return (1 / (n + 1)) * Math.pow(Math.abs(x - a) / denom, n + 1);
+          },
+          maclaurinTermHtml(k) {
+            if (k === 0) return null; // ln(1) = 0
+            const sign = (k % 2 === 1) ? 1 : -1;
+            if (k === 1) return { sign, body: 'x' };
+            return {
+              sign,
+              body: `<span class="math-frac"><span>x<sup>${k}</sup></span><span>${k}</span></span>`
+            };
+          }
+        },
+
+        geom: {
+          id: 'geom',
+          labelHtml: '1/(1&minus;x)',
+          legendText: 'f(x) = 1 / (1 − x)',
+          domainText: 'x ≠ 1',
+          asymptote: 1,
+          aDefault: 0,
+          aMin: -2.0,
+          aMax: 0.6,
+          x0Default: 0.65,
+          x0Min: -2.5,
+          x0Max: 2.2,
+          piTicks: false,
+          defaultView: { xMin: -2.6, xMax: 2.6, yMin: -3.2, yMax: 5.2 },
+          coeffFormulaHtml: '1 / (1 &minus; a)<sup>k+1</sup>',
+          boundFormulaHtml: '|x &minus; a|<sup>n+1</sup> / min(1&minus;a, 1&minus;x)<sup>n+2</sup>',
+          f(x) {
+            return Math.abs(1 - x) > 1e-12 ? 1 / (1 - x) : NaN;
+          },
+          deriv(k, a) {
+            return FACTORIALS[k] / Math.pow(1 - a, k + 1);
+          },
+          coeff(k, a) {
+            return 1 / Math.pow(1 - a, k + 1);
+          },
+          radius(a) {
+            return Math.abs(1 - a);
+          },
+          intervalText(a) {
+            const left = 2 * a - 1;
+            return `(${formatCleanNum(left)}, 1)`;
+          },
+          isInsideConv(x, a) {
+            const R = Math.abs(1 - a);
+            return Math.abs(x - a) < R;
+          },
+          isDomainValid(x) {
+            return Math.abs(1 - x) > 1e-12;
+          },
+          // Valid when x < 1 and a < 1 (no singularity between a and x)
+          // Independent check: (1−x) f' = f  =>  (1−a) c_{k+1} = c_k
+          odeOrder: 1,
+          ode(c, k, a) { return [(1 - a) * c[k + 1], c[k]]; },
+          odeText: "(1−x)f' = f",
+          // Where |x−a| / min(1−a, 1−x) ≥ 1 the Lagrange bound grows with n (series still converges)
+          looseZone(a) { return [(1 + a) / 2, 1]; },
+          lagrangeBound(x, a, n) {
+            if (x >= 1 || a >= 1) return NaN;
+            const minDist = Math.min(1 - a, 1 - x);
+            return Math.pow(Math.abs(x - a), n + 1) / Math.pow(minDist, n + 2);
+          },
+          maclaurinTermHtml(k) {
+            if (k === 0) return { sign: 1, body: '1' };
+            if (k === 1) return { sign: 1, body: 'x' };
+            return { sign: 1, body: `x<sup>${k}</sup>` };
+          }
+        }
+      };
+
+      /* =========================================================================
+       * 3. POLYNOMIAL EVALUATION & SYMBOLIC DIFFERENTIATION ENGINE
+       * ========================================================================= */
+
+      /**
+       * Computes exact Taylor coefficients [c_0, c_1, ..., c_maxK] around center a.
+       */
+      function computeCoefficients(fnDef, a, maxK) {
+        const coeffs = new Array(maxK + 1);
+        for (let k = 0; k <= maxK; k++) {
+          coeffs[k] = fnDef.coeff(k, a);
+        }
+        return coeffs;
+      }
+
+      /**
+       * Evaluates T_n(x) = sum_{k=0}^{n} c_k (x - a)^k using Horner's method.
+       */
+      function evalTaylorHorner(coeffs, n, a, x) {
+        const u = x - a;
+        let acc = 0;
+        for (let k = n; k >= 0; k--) {
+          acc = acc * u + coeffs[k];
+        }
+        return acc;
+      }
+
+      /**
+       * Evaluates the linear homotopy T(x; n + s) = (1 - s)T_n(x) + s T_{n+1}(x)
+       * Algebraically identical to T_n(x) + s * c_{n+1} * (x - a)^(n+1).
+       */
+      function evalTaylorHomotopy(coeffs, n, s, a, x) {
+        const base = evalTaylorHorner(coeffs, n, a, x);
+        if (s <= 0 || n >= MAX_DEGREE) return base;
+        const nextCoeff = coeffs[n + 1];
+        if (nextCoeff === 0) return base;
+        return base + s * nextCoeff * Math.pow(x - a, n + 1);
+      }
+
+      /**
+       * Explicitly differentiates a polynomial in shifted basis (x - a)^j
+       * k times, returning the new coefficient array of T_n^(k)(x).
+       * Used in Assertion #2 to independently verify T_n^(k)(a) against f^(k)(a).
+       */
+      function differentiateShiftedPoly(coeffs, n, order) {
+        let current = coeffs.slice(0, n + 1);
+        for (let d = 0; d < order; d++) {
+          if (current.length <= 1) return [0];
+          const next = new Array(current.length - 1);
+          for (let j = 1; j < current.length; j++) {
+            next[j - 1] = current[j] * j;
+          }
+          current = next;
+        }
+        return current;
+      }
+
+      /* =========================================================================
+       * 4. LIVE MATHEMATICAL VERIFICATION ENGINE (4 REAL-TIME ASSERTIONS)
+       * ========================================================================= */
+      function runLiveVerification(fnDef, a, n, x0, coeffs) {
+        const TOL = 1e-12;
+
+        // Check 1: Starting values. c0 must equal f(a); c1 must match a numerical
+        // slope of f itself (central difference) — independent of the derivative tables.
+        const fa = fnDef.f(a);
+        const centerErr = Math.abs(coeffs[0] - fa);
+        const h = 1e-5;
+        const fdSlope = (fnDef.f(a + h) - fnDef.f(a - h)) / (2 * h);
+        const slopeErr = Math.abs(coeffs[1] - fdSlope) / Math.max(1, Math.abs(fdSlope));
+        const check1Pass = Number.isFinite(centerErr) && centerErr < TOL &&
+                           Number.isFinite(slopeErr) && slopeErr < 1e-6;
+
+        // Check 2: Every coefficient c_0..c_n obeys the differential equation f satisfies.
+        // With the starting values from Check 1, this pins down the coefficients uniquely,
+        // so a wrong sign or a missing factorial anywhere would fail here.
+        let maxDerivErr = 0;
+        let check2Pass = true;
+        let odeCount = 0;
+        for (let k = 0; k + fnDef.odeOrder <= n; k++) {
+          const [lhs, rhs] = fnDef.ode(coeffs, k, a);
+          const scale = Math.max(Math.abs(lhs), Math.abs(rhs));
+          const err = scale < 1e-300 ? 0 : Math.abs(lhs - rhs) / scale;
+          if (!Number.isFinite(err) || err >= 1e-12) check2Pass = false;
+          if (err > maxDerivErr) maxDerivErr = err;
+          odeCount++;
+        }
+
+        const lz = fnDef.looseZone(a);
+        const inLoose = (x) => !!lz && x >= lz[0] && x <= lz[1] && fnDef.isDomainValid(x) && fnDef.isInsideConv(x, a);
+        let loosePts = 0;
+
+        // Assertion 3: Lagrange remainder bound check over 100 sample points
+        const R = fnDef.radius(a);
+        const halfSpan = Number.isFinite(R) ? 0.85 * R : 3.0;
+        const sampleMin = a - halfSpan;
+        const sampleMax = a + halfSpan;
+        const NUM_SAMPLES = 100;
+
+        let passedPts = 0;
+        let maxRatio = 0;
+        let hasMeasurableBound = false;
+
+        for (let i = 0; i < NUM_SAMPLES; i++) {
+          // Evenly spaced inside open interval (sampleMin, sampleMax)
+          const t = (i + 0.5) / NUM_SAMPLES;
+          const x = sampleMin + t * (sampleMax - sampleMin);
+          const fx = fnDef.f(x);
+          const tnx = evalTaylorHorner(coeffs, n, a, x);
+          const actualRem = Math.abs(fx - tnx);
+          const bound = fnDef.lagrangeBound(x, a, n);
+
+          if (Number.isFinite(actualRem) && Number.isFinite(bound) && actualRem <= bound + TOL) {
+            passedPts++;
+          }
+          if (inLoose(x)) loosePts++;
+
+          // Compute clean ratio only where bound is well above float64 rounding floor
+          if (Number.isFinite(bound) && bound > 1e-11) {
+            hasMeasurableBound = true;
+            const ratio = actualRem / bound;
+            if (ratio > maxRatio) maxRatio = ratio;
+          }
+        }
+        const check3Pass = (passedPts === NUM_SAMPLES);
+
+        // Assertion 4: Probe Point x0 Exact Error vs Theoretical Bound
+        const fx0 = fnDef.f(x0);
+        const tnx0 = evalTaylorHorner(coeffs, n, a, x0);
+        const remX0 = Number.isFinite(fx0) ? Math.abs(fx0 - tnx0) : NaN;
+        const boundX0 = fnDef.lagrangeBound(x0, a, n);
+
+        let check4Status = 'PASS'; // 'PASS', 'FAIL', or 'NA'
+        let probeNote = '';
+
+        if (!Number.isFinite(fx0)) {
+          check4Status = 'NA';
+          probeNote = fnDef.id === 'ln1px'
+            ? 'Undefined: x₀ ≤ −1 is outside domain of ln(1 + x).'
+            : 'Undefined: x₀ = 1 is a vertical asymptote.';
+        } else if (!Number.isFinite(boundX0)) {
+          check4Status = 'NA';
+          probeNote = 'Lagrange Theorem N/A: interval [a, x₀] crosses asymptote x = 1.';
+        } else if (remX0 <= boundX0 + TOL) {
+          check4Status = 'PASS';
+          const ratioStr = boundX0 > 1e-12 ? ` (${((remX0 / boundX0) * 100).toFixed(1)}% of bound)` : ' (exact to float64)';
+          probeNote = inLoose(x0)
+            ? `Holds${ratioStr}, but here Bₙ grows as n grows, so this bound can't show convergence. The series still converges — the actual error shrinks.`
+            : `Verified: |Rₙ(x₀)| ≤ Bₙ(x₀)${ratioStr}`;
+        } else {
+          check4Status = 'FAIL';
+          probeNote = 'Bound violation detected!';
+        }
+
+        const allPass = check1Pass && check2Pass && check3Pass && (check4Status !== 'FAIL');
+
+        return {
+          allPass,
+          check1: { pass: check1Pass, err: centerErr, slopeErr },
+          check2: { pass: check2Pass, maxErr: maxDerivErr, count: odeCount },
+          check3: {
+            pass: check3Pass,
+            passedPts,
+            totalPts: NUM_SAMPLES,
+            maxRatio,
+            hasMeasurableBound,
+            loosePts,
+            sampleMin,
+            sampleMax
+          },
+          check4: {
+            status: check4Status,
+            fx0,
+            tnx0,
+            remX0,
+            boundX0,
+            loose: check4Status === 'PASS' && inLoose(x0),
+            note: probeNote
+          }
+        };
+      }
+
+      /* =========================================================================
+       * 5. APPLICATION STATE
+       * ========================================================================= */
+      const state = {
+        fnId: 'sin',
+        a: 0,
+        x0: 2.5,
+        // Continuous animation progress p in [0, 15]
+        progress: 0,
+        playing: true,
+        smoothMorph: true,
+        speed: 1.0,
+        loopPauseTimer: 0,
+
+        // Visual overlay toggles
+        showConv: true,
+        showProbe: true,
+        showGhost: false,
+
+        // Viewport world bounds
+        view: { xMin: -7.2, xMax: 7.2, yMin: -2.6, yMax: 2.6 },
+
+        // Cached coefficients up to MAX_DEGREE + 1 (we need c_{n+1} for next-term ghost)
+        coeffs: [],
+
+        // Canvas pointer interaction state
+        draggingProbe: false,
+        panning: false,
+        hoveringProbe: false,
+        lastPointer: { x: 0, y: 0 },
+
+        // Tracking last verified integer state to avoid redundant DOM thrashing
+        lastUiKey: ''
+      };
+
+      /* =========================================================================
+       * 6. FORMATTING UTILITIES
+       * ========================================================================= */
+      function formatCleanNum(val, decimals = 2) {
+        if (!Number.isFinite(val)) return '∞';
+        if (Math.abs(val) < 1e-12) return '0';
+        const rounded = Number(val.toFixed(decimals));
+        return Object.is(rounded, -0) ? '0' : String(rounded);
+      }
+
+      function toSub(num) {
+        return String(num).replace(/\d/g, (d) => '₀₁₂₃₄₅₆₇₈₉'[d]);
+      }
+
+      function formatSci(val) {
+        if (!Number.isFinite(val)) return 'N/A';
+        if (val === 0) return '0.00e+0';
+        const abs = Math.abs(val);
+        if (abs >= 1e-3 && abs < 1e4) {
+          return String(Number(val.toPrecision(5)));
+        }
+        return val.toExponential(2);
+      }
+
+      function formatSignedVal(val) {
+        if (!Number.isFinite(val)) return 'undef';
+        if (Math.abs(val) < 1e-12) return '0.0000';
+        if (Math.abs(val) >= 1e5 || (Math.abs(val) > 0 && Math.abs(val) < 1e-4)) {
+          return val.toExponential(3);
+        }
+        return val.toFixed(4);
+      }
+
+      /**
+       * Renders clean HTML for the expanded Taylor polynomial T_n(x).
+       * Uses exact fractions when a === 0, or clean decimal coefficients when a !== 0.
+       */
+      function buildSymbolicPolynomialHtml(fnDef, a, n, coeffs) {
+        const isMaclaurin = Math.abs(a) < 1e-10;
+        const terms = [];
+
+        if (isMaclaurin) {
+          for (let k = 0; k <= n; k++) {
+            const term = fnDef.maclaurinTermHtml(k);
+            if (!term) continue;
+            terms.push({ k, sign: term.sign, body: term.body });
+          }
+        } else {
+          const absA = formatCleanNum(Math.abs(a), 2);
+          const factorStr = a > 0 ? `(x &minus; ${absA})` : `(x + ${absA})`;
+
+          for (let k = 0; k <= n; k++) {
+            const c = coeffs[k];
+            if (Math.abs(c) < 1e-12) continue;
+            const sign = c >= 0 ? 1 : -1;
+            const mag = Math.abs(c);
+
+            let coeffStr;
+            if (mag >= 1e5 || mag < 1e-4) {
+              coeffStr = mag.toExponential(2);
+            } else {
+              coeffStr = Number(mag.toFixed(4)).toString();
+            }
+
+            let body = '';
+            if (k === 0) {
+              body = coeffStr;
+            } else {
+              const showCoeff = Math.abs(mag - 1) > 1e-4;
+              const pow = k === 1 ? factorStr : `${factorStr}<sup>${k}</sup>`;
+              body = showCoeff ? `${coeffStr}&thinsp;${pow}` : pow;
+            }
+            terms.push({ k, sign, body });
+          }
+        }
+
+        const prefix = `<span class="text-amber-300 font-semibold italic">T<sub>${n}</sub>(x)</span> <span class="text-slate-400 mx-1">=</span> `;
+
+        if (terms.length === 0) {
+          return `${prefix}<span class="text-slate-200">0</span>`;
+        }
+
+        let html = prefix;
+        const lastNonZeroK = terms[terms.length - 1].k;
+
+        terms.forEach((t, idx) => {
+          const isNewest = (t.k === n) || (t.k === lastNonZeroK && n > 0 && idx === terms.length - 1);
+          const op = idx === 0
+            ? (t.sign < 0 ? '<span class="text-slate-400">&minus;</span>' : '')
+            : (t.sign < 0 ? '<span class="text-slate-400 mx-1.5">&minus;</span>' : '<span class="text-slate-400 mx-1.5">+</span>');
+
+          const highlightClass = (isNewest && t.k === n)
+            ? 'text-amber-300 bg-amber-400/10 px-1 rounded'
+            : 'text-slate-100';
+
+          html += `${op}<span class="${highlightClass}">${t.body}</span>`;
+        });
+
+        return html;
+      }
+
+      /* =========================================================================
+       * 7. DOM REFERENCES & UI INITIALIZATION
+       * ========================================================================= */
+      const els = {
+        canvasWrapper: document.getElementById('canvasWrapper'),
+        canvas: document.getElementById('mathCanvas'),
+        functionButtons: document.getElementById('functionButtons'),
+
+        legendFx: document.getElementById('legendFx'),
+        legendTn: document.getElementById('legendTn'),
+        legendErrWrap: document.getElementById('legendErrWrap'),
+        legendConvWrap: document.getElementById('legendConvWrap'),
+        legendGhostWrap: document.getElementById('legendGhostWrap'),
+        legendLooseWrap: document.getElementById('legendLooseWrap'),
+
+        animDot: document.getElementById('animDot'),
+        animStatusText: document.getElementById('animStatusText'),
+
+        btnPlayPause: document.getElementById('btnPlayPause'),
+        iconPlay: document.getElementById('iconPlay'),
+        iconPause: document.getElementById('iconPause'),
+        playPauseLabel: document.getElementById('playPauseLabel'),
+        btnStepBack: document.getElementById('btnStepBack'),
+        btnStepFwd: document.getElementById('btnStepFwd'),
+        btnResetAnim: document.getElementById('btnResetAnim'),
+        btnModeSmooth: document.getElementById('btnModeSmooth'),
+        btnModeDiscrete: document.getElementById('btnModeDiscrete'),
+        selectSpeed: document.getElementById('selectSpeed'),
+
+        btnZoomIn: document.getElementById('btnZoomIn'),
+        btnZoomOut: document.getElementById('btnZoomOut'),
+        btnResetView: document.getElementById('btnResetView'),
+
+        sliderN: document.getElementById('sliderN'),
+        valN: document.getElementById('valN'),
+        sliderA: document.getElementById('sliderA'),
+        valA: document.getElementById('valA'),
+        btnResetA: document.getElementById('btnResetA'),
+        labelAMin: document.getElementById('labelAMin'),
+        labelAMax: document.getElementById('labelAMax'),
+
+        sliderX0: document.getElementById('sliderX0'),
+        valX0: document.getElementById('valX0'),
+        labelX0Min: document.getElementById('labelX0Min'),
+        labelX0Max: document.getElementById('labelX0Max'),
+        probeConvStatus: document.getElementById('probeConvStatus'),
+
+        toggleConv: document.getElementById('toggleConv'),
+        toggleProbe: document.getElementById('toggleProbe'),
+        toggleGhost: document.getElementById('toggleGhost'),
+
+        symbolicFormulaBox: document.getElementById('symbolicFormulaBox'),
+        seriesTypeBadge: document.getElementById('seriesTypeBadge'),
+        metaRadius: document.getElementById('metaRadius'),
+        metaInterval: document.getElementById('metaInterval'),
+        metaDomain: document.getElementById('metaDomain'),
+        metaCoeffFormula: document.getElementById('metaCoeffFormula'),
+        metaBoundFormula: document.getElementById('metaBoundFormula'),
+
+        headerProofBadge: document.getElementById('headerProofBadge'),
+        verifyContext: document.getElementById('verifyContext'),
+        overallVerifyPill: document.getElementById('overallVerifyPill'),
+        badgeCheck1: document.getElementById('badgeCheck1'),
+        detailCheck1: document.getElementById('detailCheck1'),
+        badgeCheck2: document.getElementById('badgeCheck2'),
+        detailCheck2: document.getElementById('detailCheck2'),
+        odeLabel: document.getElementById('odeLabel'),
+        looseRow3: document.getElementById('looseRow3'),
+        looseCheck3: document.getElementById('looseCheck3'),
+        badgeCheck3: document.getElementById('badgeCheck3'),
+        domainCheck3: document.getElementById('domainCheck3'),
+        detailCheck3: document.getElementById('detailCheck3'),
+        ratioCheck3: document.getElementById('ratioCheck3'),
+        badgeCheck4: document.getElementById('badgeCheck4'),
+        probeFxVal: document.getElementById('probeFxVal'),
+        probeTnVal: document.getElementById('probeTnVal'),
+        probeErrVal: document.getElementById('probeErrVal'),
+        probeBoundVal: document.getElementById('probeBoundVal'),
+        probeBoundNote: document.getElementById('probeBoundNote'),
+
+        btnInfoModal: document.getElementById('btnInfoModal'),
+        infoModal: document.getElementById('infoModal'),
+        btnCloseModal: document.getElementById('btnCloseModal'),
+      };
+
+      const ctx = els.canvas.getContext('2d');
+      let canvasWidth = 800;
+      let canvasHeight = 500;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+
+      function getCurrentFn() {
+        return FUNCTIONS[state.fnId];
+      }
+
+      function refreshCoefficients() {
+        const fnDef = getCurrentFn();
+        // Compute up to MAX_DEGREE + 1 so next-term ghost is always available up to n=14
+        state.coeffs = computeCoefficients(fnDef, state.a, MAX_DEGREE + 1);
+      }
+
+      /**
+       * Renders the 5 canonical function selector buttons.
+       */
+      function renderFunctionButtons() {
+        els.functionButtons.innerHTML = '';
+        Object.values(FUNCTIONS).forEach((fn) => {
+          const isActive = fn.id === state.fnId;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = isActive
+            ? 'px-2.5 py-2.5 rounded-xl text-xs sm:text-sm math-serif font-semibold bg-sky-500/20 text-sky-200 border border-sky-400/60 shadow-[0_0_15px_rgba(56,189,248,0.18)] transition'
+            : 'px-2.5 py-2.5 rounded-xl text-xs sm:text-sm math-serif font-medium bg-navy-950/70 hover:bg-slate-800/80 text-slate-300 border border-slate-800 hover:border-slate-700 transition';
+          btn.innerHTML = fn.labelHtml;
+          btn.addEventListener('click', () => selectFunction(fn.id));
+          els.functionButtons.appendChild(btn);
+        });
+      }
+
+      function selectFunction(fnId) {
+        if (!FUNCTIONS[fnId]) return;
+        state.fnId = fnId;
+        const fnDef = getCurrentFn();
+
+        state.a = fnDef.aDefault;
+        state.x0 = fnDef.x0Default;
+        state.view = { ...fnDef.defaultView };
+        state.progress = 0;
+        state.loopPauseTimer = 0;
+
+        // Sync slider bounds
+        els.sliderA.min = fnDef.aMin;
+        els.sliderA.max = fnDef.aMax;
+        els.sliderA.value = state.a;
+        els.labelAMin.textContent = fnDef.aMin.toFixed(1);
+        els.labelAMax.textContent = fnDef.aMax.toFixed(1);
+
+        els.sliderX0.min = fnDef.x0Min;
+        els.sliderX0.max = fnDef.x0Max;
+        els.sliderX0.value = state.x0;
+        els.labelX0Min.textContent = fnDef.x0Min.toFixed(1);
+        els.labelX0Max.textContent = fnDef.x0Max.toFixed(1);
+
+        refreshCoefficients();
+        renderFunctionButtons();
+        state.lastUiKey = '';
+        updateUI(true);
+      }
+
+      /* =========================================================================
+       * 8. UI UPDATE & VERIFICATION DISPLAY
+       * ========================================================================= */
+      function setBadgeStyle(el, status) {
+        if (status === 'PASS' || status === true) {
+          el.textContent = 'PASS';
+          el.className = 'px-2 py-0.5 rounded font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30';
+        } else if (status === 'LOOSE') {
+          el.textContent = 'PASS · LOOSE';
+          el.className = 'px-2 py-0.5 rounded font-mono text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30';
+        } else if (status === 'NA') {
+          el.textContent = 'N/A';
+          el.className = 'px-2 py-0.5 rounded font-mono text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30';
+        } else {
+          el.textContent = 'FAIL';
+          el.className = 'px-2 py-0.5 rounded font-mono text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-400/40';
+        }
+      }
+
+      function updatePlayButtonUI() {
+        if (state.playing) {
+          els.iconPause.classList.remove('hidden');
+          els.iconPlay.classList.add('hidden');
+          els.playPauseLabel.textContent = 'Pause';
+          els.animDot.className = 'w-2 h-2 rounded-full bg-amber-400 animate-pulse';
+        } else {
+          els.iconPause.classList.add('hidden');
+          els.iconPlay.classList.remove('hidden');
+          els.playPauseLabel.textContent = 'Play';
+          els.animDot.className = 'w-2 h-2 rounded-full bg-slate-500';
+        }
+      }
+
+      function updateUI(force = false) {
+        const fnDef = getCurrentFn();
+        const n = Math.min(MAX_DEGREE, Math.floor(state.progress + 1e-9));
+        const s = state.smoothMorph ? Math.max(0, state.progress - n) : 0;
+
+        // Lightweight animation status pill update every frame
+        if (state.smoothMorph && n < MAX_DEGREE && s > 0.01) {
+          const zeroNext = Math.abs(state.coeffs[n + 1]) < 1e-13;
+          els.animStatusText.textContent = zeroNext
+            ? `T${toSub(n)} → T${toSub(n + 1)} (next term is 0)`
+            : `Morphing T${toSub(n)} → T${toSub(n + 1)} · ${Math.round(s * 100)}%`;
+        } else {
+          els.animStatusText.textContent = `Showing T${toSub(n)}(x)`;
+        }
+
+        // Only rebuild heavy DOM & verification when discrete parameters change
+        const uiKey = `${state.fnId}|${n}|${state.a.toFixed(4)}|${state.x0.toFixed(4)}|${state.showConv}|${state.showProbe}|${state.showGhost}`;
+        if (!force && uiKey === state.lastUiKey) return;
+        state.lastUiKey = uiKey;
+
+        // Sync sliders & readouts
+        els.sliderN.value = n;
+        els.valN.textContent = `n = ${n}`;
+        els.sliderA.value = state.a;
+        els.valA.textContent = `a = ${state.a.toFixed(2)}`;
+        els.sliderX0.value = Math.max(parseFloat(els.sliderX0.min), Math.min(parseFloat(els.sliderX0.max), state.x0));
+        els.valX0.textContent = `x₀ = ${state.x0.toFixed(2)}`;
+
+        // Legend & overlays
+        els.legendFx.textContent = fnDef.legendText;
+        els.legendTn.innerHTML = `T<sub>${n}</sub>(x)`;
+        els.legendConvWrap.classList.toggle('hidden', !state.showConv);
+        els.legendErrWrap.classList.toggle('hidden', !state.showProbe);
+        els.legendGhostWrap.classList.toggle('hidden', !state.showGhost);
+        els.legendLooseWrap.classList.toggle('hidden', !(state.showConv && fnDef.looseZone(state.a)));
+
+        // Probe convergence status label
+        if (!fnDef.isDomainValid(state.x0)) {
+          els.probeConvStatus.textContent = 'Outside Domain';
+          els.probeConvStatus.className = 'text-rose-400 font-medium';
+        } else if (fnDef.isInsideConv(state.x0, state.a)) {
+          els.probeConvStatus.textContent = 'Inside Convergence Zone';
+          els.probeConvStatus.className = 'text-emerald-400';
+        } else {
+          els.probeConvStatus.textContent = 'Divergence Zone (|x₀−a| ≥ R)';
+          els.probeConvStatus.className = 'text-rose-400';
+        }
+
+        // Metadata badges
+        const R = fnDef.radius(state.a);
+        els.metaRadius.textContent = Number.isFinite(R) ? formatCleanNum(R, 2) : '∞';
+        els.metaInterval.textContent = fnDef.intervalText(state.a);
+        els.metaDomain.textContent = fnDef.domainText;
+        els.metaCoeffFormula.innerHTML = fnDef.coeffFormulaHtml;
+        els.metaBoundFormula.innerHTML = fnDef.boundFormulaHtml;
+
+        const isMaclaurin = Math.abs(state.a) < 1e-10;
+        els.seriesTypeBadge.textContent = isMaclaurin ? 'Maclaurin (a = 0)' : `Taylor (a = ${formatCleanNum(state.a, 2)})`;
+
+        // Symbolic polynomial display
+        els.symbolicFormulaBox.innerHTML = buildSymbolicPolynomialHtml(fnDef, state.a, n, state.coeffs);
+
+        // Run & display 4-point Live Mathematical Verification
+        const res = runLiveVerification(fnDef, state.a, n, state.x0, state.coeffs);
+
+        els.verifyContext.textContent = `Checking T${toSub(n)}(x) at a = ${state.a.toFixed(2)}`;
+        setBadgeStyle(els.badgeCheck1, res.check1.pass);
+        els.detailCheck1.textContent = formatSci(Math.max(res.check1.err, res.check1.slopeErr));
+
+        setBadgeStyle(els.badgeCheck2, res.check2.pass);
+        els.odeLabel.textContent = `${fnDef.odeText}, c₀…c${toSub(n)}`;
+        els.detailCheck2.textContent = res.check2.count === 0
+          ? 'needs n ≥ ' + fnDef.odeOrder
+          : formatSci(res.check2.maxErr);
+
+        setBadgeStyle(els.badgeCheck3, res.check3.pass);
+        els.domainCheck3.textContent = `[${res.check3.sampleMin.toFixed(2)}, ${res.check3.sampleMax.toFixed(2)}]`;
+        els.detailCheck3.textContent = `${res.check3.passedPts}/${res.check3.totalPts} pts`;
+        els.ratioCheck3.textContent = res.check3.hasMeasurableBound
+          ? res.check3.maxRatio.toFixed(4)
+          : '< 1e-11 (float64 exact)';
+
+        els.looseRow3.classList.toggle('hidden', res.check3.loosePts === 0);
+        els.looseCheck3.textContent = `${res.check3.loosePts}/100`;
+
+        setBadgeStyle(els.badgeCheck4, res.check4.loose ? 'LOOSE' : res.check4.status);
+        els.probeFxVal.textContent = formatSignedVal(res.check4.fx0);
+        els.probeTnVal.textContent = formatSignedVal(res.check4.tnx0);
+        els.probeErrVal.textContent = formatSci(res.check4.remX0);
+        els.probeBoundVal.textContent = formatSci(res.check4.boundX0);
+        els.probeBoundNote.textContent = res.check4.note;
+
+        // Overall verification status pills
+        const naCount = res.check4.status === 'NA' ? 1 : 0;
+        const passCount = [res.check1.pass, res.check2.pass, res.check3.pass, res.check4.status === 'PASS'].filter(Boolean).length;
+        const headerText = naCount ? `${passCount}/3 checks pass · 1 N/A` : `${passCount}/4 checks pass`;
+        if (res.allPass) {
+          els.overallVerifyPill.textContent = naCount ? 'PASS · 1 N/A' : 'ALL PASS';
+          els.overallVerifyPill.className = 'px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/40';
+          els.headerProofBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>' + headerText + '</span>';
+          els.headerProofBadge.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-400/30';
+        } else {
+          els.overallVerifyPill.textContent = 'CHECK';
+          els.overallVerifyPill.className = 'px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-400/40';
+          els.headerProofBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-rose-400"></span><span>' + headerText + '</span>';
+          els.headerProofBadge.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-rose-500/15 text-rose-300 border border-rose-400/30';
+        }
+      }
+
+      /* =========================================================================
+       * 9. HIGH-DPI RESPONSIVE CANVAS & 3BLUE1BROWN RENDERER
+       * ========================================================================= */
+      function resizeCanvas() {
+        const rect = els.canvasWrapper.getBoundingClientRect();
+        canvasWidth = Math.max(300, Math.floor(rect.width));
+        canvasHeight = Math.max(260, Math.floor(rect.height));
+        dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+
+        els.canvas.width = Math.floor(canvasWidth * dpr);
+        els.canvas.height = Math.floor(canvasHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        renderCanvas();
+      }
+
+      function worldToScreenX(x) {
+        return ((x - state.view.xMin) / (state.view.xMax - state.view.xMin)) * canvasWidth;
+      }
+
+      function worldToScreenY(y) {
+        return canvasHeight - ((y - state.view.yMin) / (state.view.yMax - state.view.yMin)) * canvasHeight;
+      }
+
+      function screenToWorldX(sx) {
+        return state.view.xMin + (sx / canvasWidth) * (state.view.xMax - state.view.xMin);
+      }
+
+      function screenToWorldY(sy) {
+        return state.view.yMin + ((canvasHeight - sy) / canvasHeight) * (state.view.yMax - state.view.yMin);
+      }
+
+      /**
+       * Computes nice tick spacing for either π/2 multiples or decimal/integer units.
+       */
+      function computeTickStep(span, targetTicks, usePi) {
+        if (usePi) {
+          const candidates = [Math.PI / 4, Math.PI / 2, Math.PI, 2 * Math.PI, 4 * Math.PI];
+          for (const c of candidates) {
+            if (span / c <= targetTicks * 1.4) return c;
+          }
+          return 4 * Math.PI;
+        }
+        const raw = span / targetTicks;
+        const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+        const norm = raw / mag;
+        if (norm < 1.5) return 1 * mag;
+        if (norm < 3.5) return 2 * mag;
+        if (norm < 7.5) return 5 * mag;
+        return 10 * mag;
+      }
+
+      function formatPiLabel(val) {
+        const halfPis = Math.round(val / (Math.PI / 2));
+        if (halfPis === 0) return '0';
+        const sign = halfPis < 0 ? '−' : '';
+        const abs = Math.abs(halfPis);
+        if (abs % 2 === 0) {
+          const coef = abs / 2;
+          return coef === 1 ? `${sign}π` : `${sign}${coef}π`;
+        }
+        return abs === 1 ? `${sign}π/2` : `${sign}${abs}π/2`;
+      }
+
+      function formatPiQuarterLabel(val) {
+        const q = Math.round(val / (Math.PI / 4));
+        if (q === 0) return '0';
+        const sign = q < 0 ? '−' : '';
+        const abs = Math.abs(q);
+        if (abs % 4 === 0) {
+          const c = abs / 4;
+          return c === 1 ? `${sign}π` : `${sign}${c}π`;
+        }
+        if (abs % 2 === 0) {
+          const c = abs / 2;
+          return c === 1 ? `${sign}π/2` : `${sign}${c}π/2`;
+        }
+        return abs === 1 ? `${sign}π/4` : `${sign}${abs}π/4`;
+      }
+
+      /**
+       * Draws a smooth mathematical curve with discontinuity & overflow protection.
+       */
+      function drawCurve(evalFn, strokeStyle, lineWidth, options = {}) {
+        const { glow = null, dash = [], asymptote = null, domainMin = -Infinity } = options;
+        const samples = Math.min(1200, Math.max(500, Math.floor(canvasWidth * 1.4)));
+        const xSpan = state.view.xMax - state.view.xMin;
+        const yLimitPad = canvasHeight * 1.8;
+
+        ctx.save();
+        ctx.strokeStyle = strokeStyle;
+        ctx.lineWidth = lineWidth;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.setLineDash(dash);
+
+        if (glow) {
+          ctx.shadowColor = glow;
+          ctx.shadowBlur = 10;
+        }
+
+        ctx.beginPath();
+        let penDown = false;
+        let prevSy = null;
+
+        for (let i = 0; i <= samples; i++) {
+          const sx = (i / samples) * canvasWidth;
+          const wx = state.view.xMin + (i / samples) * xSpan;
+
+          if (wx <= domainMin + 1e-6) {
+            penDown = false;
+            prevSy = null;
+            continue;
+          }
+          if (asymptote !== null && Math.abs(wx - asymptote) < xSpan / samples * 1.1) {
+            penDown = false;
+            prevSy = null;
+            continue;
+          }
+
+          const wy = evalFn(wx);
+          if (!Number.isFinite(wy)) {
+            penDown = false;
+            prevSy = null;
+            continue;
+          }
+
+          let sy = worldToScreenY(wy);
+
+          // Avoid giant vertical line jumps across asymptotes or far offscreen
+          if (sy < -yLimitPad || sy > canvasHeight + yLimitPad) {
+            if (penDown && prevSy !== null && prevSy >= -20 && prevSy <= canvasHeight + 20) {
+              const clampedSy = Math.max(-yLimitPad, Math.min(canvasHeight + yLimitPad, sy));
+              ctx.lineTo(sx, clampedSy);
+            }
+            penDown = false;
+            prevSy = sy;
+            continue;
+          }
+
+          if (penDown && prevSy !== null && Math.abs(sy - prevSy) > canvasHeight * 1.4) {
+            penDown = false;
+          }
+
+          if (!penDown) {
+            ctx.moveTo(sx, sy);
+            penDown = true;
+          } else {
+            ctx.lineTo(sx, sy);
+          }
+          prevSy = sy;
+        }
+
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      /**
+       * Main Canvas Render Pipeline
+       */
+      function renderCanvas() {
+        const fnDef = getCurrentFn();
+        const n = Math.min(MAX_DEGREE, Math.floor(state.progress + 1e-9));
+        const s = state.smoothMorph ? Math.max(0, state.progress - n) : 0;
+
+        // 1. Clear with deep midnight navy (#0b1020)
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        ctx.fillStyle = '#0b1020';
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+        // 2. Interval of Convergence & Divergence Zone Shading
+        const R = fnDef.radius(state.a);
+        if (state.showConv) {
+          if (Number.isFinite(R)) {
+            const leftWorld = state.a - R;
+            const rightWorld = state.a + R;
+            const sxLeft = Math.max(0, Math.min(canvasWidth, worldToScreenX(leftWorld)));
+            const sxRight = Math.max(0, Math.min(canvasWidth, worldToScreenX(rightWorld)));
+
+            // Emerald convergence zone (|x - a| < R)
+            if (sxRight > sxLeft) {
+              ctx.fillStyle = 'rgba(52, 211, 153, 0.08)';
+              ctx.fillRect(sxLeft, 0, sxRight - sxLeft, canvasHeight);
+            }
+
+            // Soft coral divergence zones (|x - a| > R)
+            ctx.fillStyle = 'rgba(251, 113, 133, 0.055)';
+            if (sxLeft > 0) ctx.fillRect(0, 0, sxLeft, canvasHeight);
+            if (sxRight < canvasWidth) ctx.fillRect(sxRight, 0, canvasWidth - sxRight, canvasHeight);
+
+            // Amber hatch: inside the convergence zone, but the Lagrange bound grows with n
+            const lz = fnDef.looseZone(state.a);
+            if (lz) {
+              const lo = Math.max(lz[0], leftWorld), hi = Math.min(lz[1], rightWorld);
+              const sx0 = Math.max(0, worldToScreenX(lo)), sx1 = Math.min(canvasWidth, worldToScreenX(hi));
+              if (sx1 > sx0) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.rect(sx0, 0, sx1 - sx0, canvasHeight);
+                ctx.clip();
+                ctx.fillStyle = 'rgba(251, 191, 36, 0.06)';
+                ctx.fillRect(sx0, 0, sx1 - sx0, canvasHeight);
+                ctx.strokeStyle = 'rgba(251, 191, 36, 0.16)';
+                ctx.lineWidth = 1;
+                for (let hx = sx0 - canvasHeight; hx < sx1; hx += 12) {
+                  ctx.beginPath();
+                  ctx.moveTo(hx, canvasHeight);
+                  ctx.lineTo(hx + canvasHeight, 0);
+                  ctx.stroke();
+                }
+                ctx.restore();
+              }
+            }
+
+            // Dashed vertical boundary lines at a ± R
+            ctx.save();
+            ctx.strokeStyle = 'rgba(52, 211, 153, 0.55)';
+            ctx.lineWidth = 1.4;
+            ctx.setLineDash([6, 5]);
+
+            [leftWorld, rightWorld].forEach((bx) => {
+              // Skip if identical to asymptote (asymptote gets coral dashed line)
+              if (fnDef.asymptote !== null && Math.abs(bx - fnDef.asymptote) < 1e-6) return;
+              const bsx = worldToScreenX(bx);
+              if (bsx >= 0 && bsx <= canvasWidth) {
+                ctx.beginPath();
+                ctx.moveTo(bsx, 0);
+                ctx.lineTo(bsx, canvasHeight);
+                ctx.stroke();
+
+                // Boundary badge
+                ctx.save();
+                ctx.setLineDash([]);
+                ctx.font = '600 12px "JetBrains Mono", monospace';
+                const label = `x = ${formatCleanNum(bx, 2)}`;
+                const tw = ctx.measureText(label).width;
+                const pillX = Math.min(canvasWidth - tw - 14, Math.max(6, bsx - tw / 2 - 5));
+                ctx.fillStyle = 'rgba(11, 16, 32, 0.88)';
+                ctx.strokeStyle = 'rgba(52, 211, 153, 0.45)';
+                ctx.lineWidth = 1;
+                roundRect(ctx, pillX, canvasHeight - 76, tw + 10, 20, 6);
+                ctx.fill();
+                ctx.stroke();
+                ctx.fillStyle = '#34d399';
+                ctx.fillText(label, pillX + 5, canvasHeight - 62);
+                ctx.restore();
+              }
+            });
+            ctx.restore();
+          } else {
+            // Entire real line converges: subtle emerald ambient tint
+            ctx.fillStyle = 'rgba(52, 211, 153, 0.032)';
+            ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+          }
+        }
+
+        // 3. Crisp Coordinate Grid & Axes
+        const xSpan = state.view.xMax - state.view.xMin;
+        const ySpan = state.view.yMax - state.view.yMin;
+        const xStep = computeTickStep(xSpan, Math.max(5, Math.floor(canvasWidth / 100)), fnDef.piTicks);
+        const yStep = computeTickStep(ySpan, Math.max(4, Math.floor(canvasHeight / 85)), false);
+
+        // Minor grid lines (half step)
+        ctx.save();
+        ctx.strokeStyle = 'rgba(148, 163, 184, 0.065)';
+        ctx.lineWidth = 1;
+        const xMinor = xStep / 2;
+        const yMinor = yStep / 2;
+
+        const xMinorStart = Math.ceil(state.view.xMin / xMinor) * xMinor;
+        for (let x = xMinorStart; x <= state.view.xMax; x += xMinor) {
+          const sx = Math.round(worldToScreenX(x)) + 0.5;
+          ctx.beginPath();
+          ctx.moveTo(sx, 0);
+          ctx.lineTo(sx, canvasHeight);
+          ctx.stroke();
+        }
+        const yMinorStart = Math.ceil(state.view.yMin / yMinor) * yMinor;
+        for (let y = yMinorStart; y <= state.view.yMax; y += yMinor) {
+          const sy = Math.round(worldToScreenY(y)) + 0.5;
+          ctx.beginPath();
+          ctx.moveTo(0, sy);
+          ctx.lineTo(canvasWidth, sy);
+          ctx.stroke();
+        }
+
+        // Major grid lines
+        ctx.strokeStyle = 'rgba(148, 163, 184, 0.14)';
+        const xStart = Math.ceil(state.view.xMin / xStep) * xStep;
+        for (let x = xStart; x <= state.view.xMax; x += xStep) {
+          const sx = Math.round(worldToScreenX(x)) + 0.5;
+          ctx.beginPath();
+          ctx.moveTo(sx, 0);
+          ctx.lineTo(sx, canvasHeight);
+          ctx.stroke();
+        }
+        const yStart = Math.ceil(state.view.yMin / yStep) * yStep;
+        for (let y = yStart; y <= state.view.yMax; y += yStep) {
+          const sy = Math.round(worldToScreenY(y)) + 0.5;
+          ctx.beginPath();
+          ctx.moveTo(0, sy);
+          ctx.lineTo(canvasWidth, sy);
+          ctx.stroke();
+        }
+
+        // Primary X & Y Axes
+        const originX = worldToScreenX(0);
+        const originY = worldToScreenY(0);
+        ctx.strokeStyle = 'rgba(226, 232, 240, 0.42)';
+        ctx.lineWidth = 1.5;
+
+        if (originY >= 0 && originY <= canvasHeight) {
+          ctx.beginPath();
+          ctx.moveTo(0, originY);
+          ctx.lineTo(canvasWidth, originY);
+          ctx.stroke();
+        }
+        if (originX >= 0 && originX <= canvasWidth) {
+          ctx.beginPath();
+          ctx.moveTo(originX, 0);
+          ctx.lineTo(originX, canvasHeight);
+          ctx.stroke();
+        }
+
+        const drawTickLabels = () => {
+        ctx.save();
+        // Tick labels
+        ctx.font = '500 12px "JetBrains Mono", monospace';
+        ctx.fillStyle = 'rgba(203, 213, 225, 0.9)';
+        ctx.strokeStyle = 'rgba(11, 16, 32, 0.9)';
+        ctx.lineWidth = 4;
+        ctx.lineJoin = 'round';
+        const xAxisLabelY = Math.min(canvasHeight - 10, Math.max(16, originY + 15));
+        const yAxisLabelX = Math.min(canvasWidth - 36, Math.max(8, originX + 7));
+
+        ctx.textAlign = 'center';
+        for (let x = xStart; x <= state.view.xMax; x += xStep) {
+          if (Math.abs(x) < xStep * 0.1) continue;
+          const sx = worldToScreenX(x);
+          if (sx < 18 || sx > canvasWidth - 18) continue;
+          const label = fnDef.piTicks
+            ? (xStep < Math.PI / 2 - 0.01 ? formatPiQuarterLabel(x) : formatPiLabel(x))
+            : formatCleanNum(x, 2);
+          ctx.strokeText(label, sx, xAxisLabelY);
+          ctx.fillText(label, sx, xAxisLabelY);
+        }
+
+        ctx.textAlign = 'left';
+        for (let y = yStart; y <= state.view.yMax; y += yStep) {
+          if (Math.abs(y) < yStep * 0.1) continue;
+          const sy = worldToScreenY(y);
+          if (sy < 14 || sy > canvasHeight - 14) continue;
+          ctx.strokeText(formatCleanNum(y, 2), yAxisLabelX, sy + 4);
+          ctx.fillText(formatCleanNum(y, 2), yAxisLabelX, sy + 4);
+        }
+        ctx.restore();
+        };
+        ctx.restore();
+
+        // 4. Vertical Asymptote (x = -1 for ln(1+x), x = 1 for 1/(1-x))
+        if (fnDef.asymptote !== null) {
+          const asx = worldToScreenX(fnDef.asymptote);
+          if (asx >= -2 && asx <= canvasWidth + 2) {
+            ctx.save();
+            ctx.strokeStyle = 'rgba(251, 113, 133, 0.8)';
+            ctx.lineWidth = 1.75;
+            ctx.setLineDash([7, 5]);
+            ctx.beginPath();
+            ctx.moveTo(asx, 0);
+            ctx.lineTo(asx, canvasHeight);
+            ctx.stroke();
+
+            ctx.setLineDash([]);
+            ctx.font = '600 12px "JetBrains Mono", monospace';
+            const txt = `Asymptote x = ${fnDef.asymptote}`;
+            const tw = ctx.measureText(txt).width;
+            const px = Math.min(canvasWidth - tw - 14, Math.max(8, asx + 8));
+            ctx.fillStyle = 'rgba(11, 16, 32, 0.9)';
+            ctx.strokeStyle = 'rgba(251, 113, 133, 0.55)';
+            ctx.lineWidth = 1;
+            roundRect(ctx, px, 48, tw + 12, 22, 6);
+            ctx.fill();
+            ctx.stroke();
+            ctx.fillStyle = '#fb7185';
+            ctx.fillText(txt, px + 6, 63);
+            ctx.restore();
+          }
+        }
+
+        // 5. Optional Next Term Ghost Curve: c_{n+1} (x - a)^{n+1}
+        if (state.showGhost && n < MAX_DEGREE) {
+          const nextC = state.coeffs[n + 1];
+          if (Math.abs(nextC) > 1e-14) {
+            drawCurve(
+              (x) => nextC * Math.pow(x - state.a, n + 1),
+              'rgba(167, 139, 250, 0.72)',
+              1.75,
+              { dash: [6, 5] }
+            );
+          }
+        }
+
+        // 6. Exact Function f(x) in Glowing Cyan (#38bdf8)
+        drawCurve(
+          (x) => fnDef.f(x),
+          '#38bdf8',
+          2.8,
+          {
+            glow: 'rgba(56, 189, 248, 0.55)',
+            asymptote: fnDef.asymptote,
+            domainMin: fnDef.id === 'ln1px' ? -1 : -Infinity
+          }
+        );
+
+        // 7. Taylor Polynomial T_n(x) (or smooth morph homotopy) in Warm Amber/Gold (#fbbf24)
+        drawCurve(
+          (x) => evalTaylorHomotopy(state.coeffs, n, s, state.a, x),
+          '#fbbf24',
+          2.8,
+          { glow: 'rgba(251, 191, 36, 0.52)' }
+        );
+
+        drawTickLabels();
+
+        // 8. Expansion Center Point (a, f(a)) Marker
+        const centerSx = worldToScreenX(state.a);
+        const centerSy = worldToScreenY(fnDef.f(state.a));
+        if (centerSx >= -10 && centerSx <= canvasWidth + 10 && centerSy >= -10 && centerSy <= canvasHeight + 10) {
+          ctx.save();
+          // Vertical guide to x-axis
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.32)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([3, 3]);
+          ctx.beginPath();
+          ctx.moveTo(centerSx, Math.max(0, Math.min(canvasHeight, originY)));
+          ctx.lineTo(centerSx, centerSy);
+          ctx.stroke();
+
+          ctx.setLineDash([]);
+          ctx.beginPath();
+          ctx.arc(centerSx, centerSy, 5.5, 0, Math.PI * 2);
+          ctx.fillStyle = '#0b1020';
+          ctx.fill();
+          ctx.lineWidth = 2.4;
+          ctx.strokeStyle = '#38bdf8';
+          ctx.stroke();
+
+          // Small label "a"
+          ctx.font = 'italic 600 13px "STIX Two Text", Georgia, serif';
+          ctx.fillStyle = '#7dd3fc';
+          ctx.fillText(`a = ${formatCleanNum(state.a, 2)}`, centerSx + 9, centerSy - 9);
+          ctx.restore();
+        }
+
+        // 9. Probe Point x0 Vertical Error Segment & Interactive Handle
+        if (state.showProbe) {
+          const probeSx = worldToScreenX(state.x0);
+          const fx0 = fnDef.f(state.x0);
+          const tnx0 = evalTaylorHomotopy(state.coeffs, n, s, state.a, state.x0);
+
+          if (probeSx >= -20 && probeSx <= canvasWidth + 20) {
+            ctx.save();
+
+            // Subtle vertical guide line across canvas
+            ctx.strokeStyle = state.draggingProbe || state.hoveringProbe
+              ? 'rgba(251, 113, 133, 0.45)'
+              : 'rgba(251, 113, 133, 0.22)';
+            ctx.lineWidth = state.draggingProbe ? 1.5 : 1;
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.moveTo(probeSx, 0);
+            ctx.lineTo(probeSx, canvasHeight);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            const syF = Number.isFinite(fx0) ? worldToScreenY(fx0) : NaN;
+            const syT = Number.isFinite(tnx0) ? worldToScreenY(tnx0) : NaN;
+
+            // Coral error segment connecting (x0, f(x0)) and (x0, T_n(x0))
+            if (Number.isFinite(syF) && Number.isFinite(syT)) {
+              const clampedSyF = Math.max(-50, Math.min(canvasHeight + 50, syF));
+              const clampedSyT = Math.max(-50, Math.min(canvasHeight + 50, syT));
+
+              ctx.strokeStyle = '#fb7185';
+              ctx.lineWidth = 3;
+              ctx.shadowColor = 'rgba(251, 113, 133, 0.65)';
+              ctx.shadowBlur = 8;
+              ctx.beginPath();
+              ctx.moveTo(probeSx, clampedSyF);
+              ctx.lineTo(probeSx, clampedSyT);
+              ctx.stroke();
+              ctx.shadowBlur = 0;
+
+              // Endpoints
+              if (syF >= -10 && syF <= canvasHeight + 10) {
+                ctx.beginPath();
+                ctx.arc(probeSx, syF, 5, 0, Math.PI * 2);
+                ctx.fillStyle = '#38bdf8';
+                ctx.fill();
+                ctx.strokeStyle = '#0b1020';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+              }
+              if (syT >= -10 && syT <= canvasHeight + 10) {
+                ctx.beginPath();
+                ctx.arc(probeSx, syT, 5, 0, Math.PI * 2);
+                ctx.fillStyle = '#fbbf24';
+                ctx.fill();
+                ctx.strokeStyle = '#0b1020';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+              }
+
+              // Floating Callout Box near error midpoint
+              const actualErr = Math.abs(fx0 - tnx0);
+              const bound = fnDef.lagrangeBound(state.x0, state.a, n);
+              const line1 = `x₀ = ${state.x0.toFixed(2)}`;
+              const morphing = s > 0.001 && n < MAX_DEGREE && Math.abs(state.coeffs[n + 1]) > 1e-13;
+              const line2 = `|error| = ${formatSci(actualErr)}`;
+              const line3 = morphing
+                ? 'bound: at whole n'
+                : (Number.isFinite(bound) ? `bound = ${formatSci(bound)}` : 'bound = N/A');
+
+              ctx.font = '500 12px "JetBrains Mono", monospace';
+              const boxW = Math.max(ctx.measureText(line1).width, ctx.measureText(line2).width, ctx.measureText(line3).width) + 18;
+              const boxH = 56;
+              const midY = Math.max(66, Math.min(canvasHeight - boxH - 36, (clampedSyF + clampedSyT) / 2 - boxH / 2));
+              const placeLeft = probeSx + 16 + boxW > canvasWidth - 10;
+              const boxX = placeLeft ? Math.max(8, probeSx - boxW - 14) : probeSx + 14;
+
+              ctx.fillStyle = 'rgba(11, 16, 32, 0.92)';
+              ctx.strokeStyle = 'rgba(251, 113, 133, 0.5)';
+              ctx.lineWidth = 1.2;
+              roundRect(ctx, boxX, midY, boxW, boxH, 9);
+              ctx.fill();
+              ctx.stroke();
+
+              ctx.fillStyle = '#e2e8f0';
+              ctx.fillText(line1, boxX + 9, midY + 16);
+              ctx.fillStyle = '#fb7185';
+              ctx.fillText(line2, boxX + 9, midY + 33);
+              ctx.fillStyle = '#34d399';
+              ctx.fillText(line3, boxX + 9, midY + 49);
+            }
+
+            // Draggable Handle Pill on X-Axis
+            const handleY = Math.max(24, Math.min(canvasHeight - 24, originY));
+            ctx.beginPath();
+            ctx.arc(probeSx, handleY, state.draggingProbe || state.hoveringProbe ? 8.5 : 7, 0, Math.PI * 2);
+            ctx.fillStyle = '#fb7185';
+            ctx.shadowColor = 'rgba(251, 113, 133, 0.75)';
+            ctx.shadowBlur = 10;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            ctx.strokeStyle = '#0b1020';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.restore();
+          }
+        }
+      }
+
+      /**
+       * Helper to draw crisp rounded rectangles on Canvas 2D.
+       */
+      function roundRect(context, x, y, w, h, r) {
+        context.beginPath();
+        context.moveTo(x + r, y);
+        context.arcTo(x + w, y, x + w, y + h, r);
+        context.arcTo(x + w, y + h, x, y + h, r);
+        context.arcTo(x, y + h, x, y, r);
+        context.arcTo(x, y, x + w, y, r);
+        context.closePath();
+      }
+
+      /* =========================================================================
+       * 10. ANIMATION LOOP (AUTO-STARTS ON WINDOW LOAD)
+       * ========================================================================= */
+      let lastTimestamp = null;
+
+      function animate(timestamp) {
+        if (lastTimestamp === null) lastTimestamp = timestamp;
+        const dt = Math.min(0.05, (timestamp - lastTimestamp) / 1000);
+        lastTimestamp = timestamp;
+
+        if (state.playing) {
+          // Base rate: ~0.85 degrees per second scaled by user speed
+          const rate = 0.85 * state.speed;
+
+          if (state.progress >= MAX_DEGREE) {
+            state.progress = MAX_DEGREE;
+            state.loopPauseTimer += dt;
+            if (state.loopPauseTimer >= 2.2) {
+              state.progress = 0;
+              state.loopPauseTimer = 0;
+            }
+          } else {
+            state.progress = Math.min(MAX_DEGREE, state.progress + dt * rate);
+          }
+
+          updateUI(false);
+        }
+
+        renderCanvas();
+        window.requestAnimationFrame(animate);
+      }
+
+      /* =========================================================================
+       * 11. EVENT LISTENERS (CONTROLS, CANVAS PAN/ZOOM, DRAGGABLE PROBE)
+       * ========================================================================= */
+
+      // Play / Pause
+      els.btnPlayPause.addEventListener('click', () => {
+        if (!state.playing && state.progress >= MAX_DEGREE) {
+          state.progress = 0;
+          state.loopPauseTimer = 0;
+        }
+        state.playing = !state.playing;
+        updatePlayButtonUI();
+      });
+
+      // Step Backward / Forward
+      els.btnStepBack.addEventListener('click', () => {
+        state.playing = false;
+        updatePlayButtonUI();
+        const currentN = Math.floor(state.progress + 1e-9);
+        state.progress = Math.max(0, currentN - 1);
+        updateUI(true);
+      });
+
+      els.btnStepFwd.addEventListener('click', () => {
+        state.playing = false;
+        updatePlayButtonUI();
+        const currentN = Math.floor(state.progress + 1e-9);
+        state.progress = Math.min(MAX_DEGREE, currentN + 1);
+        updateUI(true);
+      });
+
+      // Reset to n = 0
+      els.btnResetAnim.addEventListener('click', () => {
+        state.progress = 0;
+        state.loopPauseTimer = 0;
+        updateUI(true);
+      });
+
+      // Mode Toggle: Smooth Morph vs Discrete Step
+      function setMorphMode(smooth) {
+        state.smoothMorph = smooth;
+        els.btnModeSmooth.setAttribute('aria-pressed', String(smooth));
+        els.btnModeDiscrete.setAttribute('aria-pressed', String(!smooth));
+        if (smooth) {
+          els.btnModeSmooth.className = 'px-2.5 py-1 rounded-lg font-medium transition bg-sky-500/20 text-sky-300 border border-sky-400/30';
+          els.btnModeDiscrete.className = 'px-2.5 py-1 rounded-lg font-medium transition text-slate-400 hover:text-slate-200 border border-transparent';
+        } else {
+          els.btnModeDiscrete.className = 'px-2.5 py-1 rounded-lg font-medium transition bg-sky-500/20 text-sky-300 border border-sky-400/30';
+          els.btnModeSmooth.className = 'px-2.5 py-1 rounded-lg font-medium transition text-slate-400 hover:text-slate-200 border border-transparent';
+        }
+        updateUI(true);
+      }
+
+      els.btnModeSmooth.addEventListener('click', () => setMorphMode(true));
+      els.btnModeDiscrete.addEventListener('click', () => setMorphMode(false));
+
+      // Speed Selector
+      els.selectSpeed.addEventListener('change', (e) => {
+        state.speed = parseFloat(e.target.value) || 1.0;
+      });
+
+      // Degree n Slider
+      els.sliderN.addEventListener('input', (e) => {
+        state.playing = false;
+        updatePlayButtonUI();
+        state.progress = parseInt(e.target.value, 10);
+        updateUI(true);
+      });
+
+      // Expansion Center a Slider
+      els.sliderA.addEventListener('input', (e) => {
+        state.a = parseFloat(e.target.value);
+        if (Math.abs(state.a) < 1e-9) state.a = 0;
+        refreshCoefficients();
+        updateUI(true);
+      });
+
+      els.btnResetA.addEventListener('click', () => {
+        state.a = 0;
+        refreshCoefficients();
+        updateUI(true);
+      });
+
+      // Probe Point x0 Slider
+      els.sliderX0.addEventListener('input', (e) => {
+        state.x0 = parseFloat(e.target.value);
+        updateUI(true);
+      });
+
+      // Visual Overlay Toggles
+      els.toggleConv.addEventListener('change', (e) => {
+        state.showConv = e.target.checked;
+        updateUI(true);
+      });
+      els.toggleProbe.addEventListener('change', (e) => {
+        state.showProbe = e.target.checked;
+        updateUI(true);
+      });
+      els.toggleGhost.addEventListener('change', (e) => {
+        state.showGhost = e.target.checked;
+        updateUI(true);
+      });
+
+      // Zoom & Reset View Buttons
+      function zoomAround(factor, centerX, centerY) {
+        const xSpan = state.view.xMax - state.view.xMin;
+        const ySpan = state.view.yMax - state.view.yMin;
+        const newXSpan = Math.max(0.8, Math.min(60, xSpan * factor));
+        const newYSpan = Math.max(0.8, Math.min(60, ySpan * factor));
+        const rx = (centerX - state.view.xMin) / xSpan;
+        const ry = (centerY - state.view.yMin) / ySpan;
+
+        state.view.xMin = centerX - rx * newXSpan;
+        state.view.xMax = state.view.xMin + newXSpan;
+        state.view.yMin = centerY - ry * newYSpan;
+        state.view.yMax = state.view.yMin + newYSpan;
+      }
+
+      els.btnZoomIn.addEventListener('click', () => {
+        zoomAround(0.78, (state.view.xMin + state.view.xMax) / 2, (state.view.yMin + state.view.yMax) / 2);
+      });
+      els.btnZoomOut.addEventListener('click', () => {
+        zoomAround(1.28, (state.view.xMin + state.view.xMax) / 2, (state.view.yMin + state.view.yMax) / 2);
+      });
+      els.btnResetView.addEventListener('click', () => {
+        state.view = { ...getCurrentFn().defaultView };
+      });
+
+      // Canvas Mouse & Touch Pointer Interactions (Draggable Probe x0 + Pan + Wheel Zoom)
+      function getCanvasPoint(clientX, clientY) {
+        const rect = els.canvas.getBoundingClientRect();
+        return { x: clientX - rect.left, y: clientY - rect.top };
+      }
+
+      function isNearProbe(sx) {
+        if (!state.showProbe) return false;
+        const probeSx = worldToScreenX(state.x0);
+        return Math.abs(sx - probeSx) <= 18;
+      }
+
+      function handlePointerDown(clientX, clientY) {
+        const pt = getCanvasPoint(clientX, clientY);
+        state.lastPointer = pt;
+        if (isNearProbe(pt.x)) {
+          state.draggingProbe = true;
+          els.canvas.style.cursor = 'ew-resize';
+        } else {
+          state.panning = true;
+          els.canvas.style.cursor = 'grabbing';
+        }
+      }
+
+      function handlePointerMove(clientX, clientY) {
+        const pt = getCanvasPoint(clientX, clientY);
+
+        if (state.draggingProbe) {
+          const fnDef = getCurrentFn();
+          let newX0 = screenToWorldX(pt.x);
+          // Clamp gently inside visible view bounds
+          newX0 = Math.max(state.view.xMin + 0.05, Math.min(state.view.xMax - 0.05, newX0));
+          // Keep ln(1+x) drag clean when approaching -1
+          if (fnDef.id === 'ln1px' && Math.abs(newX0 + 1) < 0.02) newX0 = -0.98;
+          state.x0 = Number(newX0.toFixed(3));
+          updateUI(true);
+          return;
+        }
+
+        if (state.panning) {
+          const dx = pt.x - state.lastPointer.x;
+          const dy = pt.y - state.lastPointer.y;
+          const wxDelta = (dx / canvasWidth) * (state.view.xMax - state.view.xMin);
+          const wyDelta = (dy / canvasHeight) * (state.view.yMax - state.view.yMin);
+
+          state.view.xMin -= wxDelta;
+          state.view.xMax -= wxDelta;
+          state.view.yMin += wyDelta;
+          state.view.yMax += wyDelta;
+          state.lastPointer = pt;
+          return;
+        }
+
+        // Hover cursor detection
+        const near = isNearProbe(pt.x);
+        state.hoveringProbe = near;
+        els.canvas.style.cursor = near ? 'ew-resize' : 'grab';
+      }
+
+      function handlePointerUp() {
+        state.draggingProbe = false;
+        state.panning = false;
+        els.canvas.style.cursor = state.hoveringProbe ? 'ew-resize' : 'grab';
+      }
+
+      els.canvas.addEventListener('mousedown', (e) => handlePointerDown(e.clientX, e.clientY));
+      window.addEventListener('mousemove', (e) => {
+        if (state.draggingProbe || state.panning || e.target === els.canvas) {
+          handlePointerMove(e.clientX, e.clientY);
+        }
+      });
+      window.addEventListener('mouseup', handlePointerUp);
+
+      // Mouse wheel zoom centered on cursor
+      els.canvas.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const pt = getCanvasPoint(e.clientX, e.clientY);
+        const wx = screenToWorldX(pt.x);
+        const wy = screenToWorldY(pt.y);
+        const factor = e.deltaY > 0 ? 1.12 : 0.89;
+        zoomAround(factor, wx, wy);
+      }, { passive: false });
+
+      // Touch events for mobile/tablet drag & pan
+      els.canvas.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          e.preventDefault();
+          const t = e.touches[0];
+          handlePointerDown(t.clientX, t.clientY);
+        }
+      }, { passive: false });
+
+      els.canvas.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 1 && (state.draggingProbe || state.panning)) {
+          e.preventDefault();
+          const t = e.touches[0];
+          handlePointerMove(t.clientX, t.clientY);
+        }
+      }, { passive: false });
+
+      els.canvas.addEventListener('touchend', handlePointerUp);
+      els.canvas.addEventListener('touchcancel', handlePointerUp);
+
+      // Info Modal
+      els.btnInfoModal.addEventListener('click', () => {
+        els.infoModal.classList.remove('hidden');
+        els.infoModal.classList.add('flex');
+      });
+      els.btnCloseModal.addEventListener('click', () => {
+        els.infoModal.classList.add('hidden');
+        els.infoModal.classList.remove('flex');
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !els.infoModal.classList.contains('hidden')) {
+          els.infoModal.classList.add('hidden');
+          els.infoModal.classList.remove('flex');
+          els.btnInfoModal.focus();
+        }
+      });
+      els.btnInfoModal.addEventListener('click', () => els.btnCloseModal.focus());
+      els.infoModal.addEventListener('click', (e) => {
+        if (e.target === els.infoModal) {
+          els.infoModal.classList.add('hidden');
+          els.infoModal.classList.remove('flex');
+        }
+      });
+
+      // Responsive Canvas Resize Handling
+      window.addEventListener('resize', resizeCanvas);
+      if (typeof ResizeObserver !== 'undefined') {
+        const ro = new ResizeObserver(() => resizeCanvas());
+        ro.observe(els.canvasWrapper);
+      }
+
+      /* =========================================================================
+       * 12. BOOTSTRAP ON WINDOW LOAD
+       * ========================================================================= */
+      window.onload = function () {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          state.playing = false; // respect reduced-motion: wait for the user to press Play
+        }
+        selectFunction('sin');
+        updatePlayButtonUI();
+        resizeCanvas();
+        window.requestAnimationFrame(animate);
+      };
+    })();
+  </script>
+</body>
+</html>
